@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="logo.jpg" type="image/jpg">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Leave Management System</title>
+    <style>
+.sidenav a:hover {
+  color: #3d3131;
+}
+div.card {
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+div.header {
+  background-color: rgb(141, 143, 137);
+  color: white;
+  padding: 10px;
+  font-size: 15px;
+}
+.sidenav {
+  height: 100%;
+  width: 220px;
+  position: fixed;
+  z-index: 1;
+  background-color: rgb(24,119,242);
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.btn {
+    color: rgb(240, 228, 228);
+    font-size: 120%;
+    float: center;
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: none;
+    background-color:  rgb(141, 143, 137);
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  .input-field {
+    width: 70%;
+    font-size: 15px;
+    border: 10px 10px;
+    border-radius: 10px;
+  }
+  .btn:hover {
+    color: rgb(46, 42, 42);
+  }
+  .in{
+    padding:5px;
+  }
+header {
+  background-color: rgb(255, 255, 255)
+}
+body {
+  background-color: rgb(141, 143, 137)
+}
+.sidenav a {
+  padding: 16px 18px 16px 26px;
+  text-decoration: none;
+  font-size: 25px;
+  color:rgb(255, 255, 255);
+  display: block;
+}
+
+    </style>
+  </head>
+  <body>
+      <header>
+          <table>
+            <tr>
+              <td>
+                <a href="HomePage.html">
+                  <img src="logo.jpg" alt="Smiley face" height="180" width="230">
+                </a>
+              </td>
+              <td>
+                <h1>Hexaware Technologies Inc.</h1>
+              </td>
+            </tr>
+          </table>
+        </header>
+        <section>
+          <nav class="sidenav">
+              <a href="AdminDashboard.html">Dashboard</a>
+              <a href="AddHolidays.html">Add Holidays</a>
+              <a href="LeaveHistory.html">Leave History</a>
+              <a href="HolidayHistory.html">Holidays History</a>
+          </nav>
+          <div class="w3-center">
+              <form style="max-width:500px;margin:auto">
+                  <div class="card">
+                    <div class="header">
+                      <h2 style="color: rgb(240, 228, 228);">Add Holidays</h2>
+                      <div>
+                        <i>Select Date:</i><input class="input-field"type="Date" min="2019-01-01">
+                       <br>
+                      </div>
+                      
+                      <div>
+                      <i>Reason:</i><textarea class="input-field" type="text" rows="2" cols="20"></textarea>
+                      </div>
+
+                      <h5><button type="submit"class="btn" onclick="return add()"  >Add</button></h5>
+                    </div>
+                  </div>
+                </form>
+        </section>
+        <script>
+        function add(){
+          alert("Successfully Added a Holiday");
+          window.open("AdminDashboard.html");
+        }
+        </script>
+        
+  </body>
+</html>
+    
