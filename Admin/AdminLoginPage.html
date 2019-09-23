@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="logo.jpg" type="image/jpg">
@@ -52,14 +51,11 @@ body {
         <div class="input-container" style="float: center;text-align: center;">
           <i class="fa fa-user icon" ></i><input class="input-field"name="username" id="username" type="text">
          <br>
-          <span id="errorMsg" style="color:red"></span>
         </div>
-        <div class="error" id="usernameErr"  style="color: rgb(255, 0, 0);float: center;text-align: center;">
-        </div>
+        
         <div class="input-container">
-        <i class="fa fa-key icon"></i><input class="input-field"type="password" name="password" id="password" required>
-        </div>
-        <div class="error" id="passwordErr" style="color: rgb(255, 0, 0);float: center;text-align: center;"> 
+        <i class="fa fa-key icon"></i><input class="input-field"type="password" name="password" id="password">
+        
         </div>
         <h3><button type="submit"class="btn" >Login</button></h3>
       </div>
@@ -70,19 +66,15 @@ body {
       function validateForm() {
           var x = document.forms["form1"]["username"].value;
           var y = document.forms["form1"]["password"].value;
-          if (x == null || x == "") {
-              // fill out the placeholder with a message
-             // document.getElementById("errorMsg").innerHTML = "*Name must be filled out";
-window.open("AdminDashboard.html");
+          if (x == null || x == "" || y == null || y == "" ) {
+            alert("You forgot to fill Username / Password");
+              window.open("AdminDashboard.html");
               return false;
           }
-          if (y == null || y == "") {
-              // fill out the placeholder with a message
-              document.getElementById("errorMsg").innerHTML = "*Name must be filled out";
+          if (x == "admin" || y == "admin") {
+            windows.open("AdminDashboard.html");
               return false;
           }
-          if (x == "") {
-
       }
       </script>
 </body>
