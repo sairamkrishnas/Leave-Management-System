@@ -1,0 +1,43 @@
+body{
+    margin:0;
+    background-color: grey;
+}
+img { 
+    display: inline-block;
+  } 
+ header{
+     background: White;
+     color: black;
+     
+}
+header h1{
+    margin:0;
+    display:inline;
+    letter-spacing: 5px;
+    font-style: cursive;
+    padding: 20px 130px;
+    
+}
+.test{
+    height:100px;
+    width:400px;
+    align-items: center;
+    padding : 50px;
+    font-size: 15px;
+}
+
+p{
+    font-size: x-large;
+    letter-spacing: 3px;
+    color: white;
+}
+.section{
+    clear: both;
+    border-radius: 5px;
+    color:white;
+    font-size: large;
+    padding: 50px ;
+    float: left;
+    margin: 50px;
+    width: 50%;
+}

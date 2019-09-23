@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Leave Applicaton</title>
+        
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link rel = "stylesheet" href = "leave.css" type = "text/css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script> type = "text/javascript"; src = "validate.js"</script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <style>
+
+                
+                
+                </style>
+                 <table>
+
+                        <tr>
+                    
+                          <td>
+                    
+                              <a href="HomePage.html">
+                    
+                                <img src="hexa.png" alt="Smiley face" height="180" width="230">
+                    
+                              </a>
+                    
+                          </td>
+                    
+                          <td>
+                    
+                              <h1 align = "center letter-spacing: 5px font-style: cursive" ><strong>LEAVE  MANAGEMENT  SYSTEM</strong></h1>
+                    
+                          </td>
+                    
+                        </tr>
+                    
+                      </table>
+    </head>        
+    
+    <body class="bg-dark">
+        <header class="bg-dark" style="height: 60px; padding: 5px;">
+            <h3 class="text-light" style="text-align: center;">MY LEAVE APPLICAION</h3>
+            
+        </header>
+        <div class="container bg-dark">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2"></div>		
+            <div class="col-sm-6 bg-light boxStyle">
+                <form name="theform" action="" onSubmit="validate()" >
+        <div class="form-group">
+            <div class="width30 floatL"><label>Start Date</label></div>
+            <div class="width70 floatR"><input id="startdate" class="width100 form-control" name="startdate" type="date" value="" size="20">
+        </div><br><br>
+        <div class="form-group">
+            <div class="width30 floatL"><label>End Date</label></div>
+            <div class="width70 floatR"><input id = "enddate" class="width100 form-control" name="enddate" type="date" value="" size="20"></div>
+        </div><br>
+        <div class="form-group">
+            <div class="width30 floatL"><label>Number of days</label></div>
+            <div class="width70 floatR"><input id="numberofdays" class="width100 form-control" name="number of days"  src=""   type="number" value="" size="20"></div>
+        </div><br>
+        <div class="form-group">
+                <div class="width30 floatL"><label>Leave Reason</label></div>
+                <div class="width70 floatR"><input id = "leavereason" class="width100 form-control" name="leave reason"  src=""   type="text" value="" size="20"></div>
+            </div><br>
+              <div class="form-group">
+             <div class="width30 floatL"><label>Leave Type</label></div>
+         </div>
+         <div class="width70 floatR"><div class="form-group">
+        <input name="ch" value="sick" type="radio">
+        <label for="customRadio">Sick</label>
+        <input name="ch" value="earned" type="radio">
+        <label for="customRadio">Earned</label>
+        <input name="ch" value="maternity" type="radio">
+        <label for="customRadio">Maternity</label>
+        <input name="ch" value="other" type="radio">
+        <label for="customRadio">Other</label>
+          </div></div><br><br><br>
+    
+          <div class="form-group">
+          <div class="row">
+        <div class="form-action-buttons w3-center"><input class="form-action-buttons" type="submit" onclick="event.preventDefault();onFormSubmit();"  value="Accept" style="font-weight: bold"></div>
+         <div class="form-action-buttons"><input class="form-action-buttons" type="reset" value = "Cancel"style="font-weight: bold"></div>		
+          </div>
+          </div>
+         </form>  
+         <td>
+                <table class="list" id="leavelist">
+                        <thead>
+                            <tr>
+                                <th>Start Date</th>
+                                <th>End date</th>
+                                <th>Number of days</th>
+                                <th>Leave Reason</th>
+                                <th>Leave Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            </tbody>
+                            </table>
+         </td>    
+            </div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2"></div>
+        </div> 
+        </div> 
+       <script> src="mla.js"</script>        
+    </body>
+                      
+            
+
+</html>
