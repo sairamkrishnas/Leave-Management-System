@@ -1,0 +1,89 @@
+
+.nav a:hover{
+    color: rgb(46, 42, 42)
+}
+.nav a{
+    color: rgb(240, 228, 228);
+    float: center;
+    text-align: center;
+    padding: 40px 40px;
+    text-decoration: none;
+}
+
+h1{
+    padding:20px 130px;
+    font:bold;
+    letter-spacing: 5px;
+}
+
+.input-container {
+    display: -ms-flexbox;
+    display: flex;
+    border: 10px 10px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .icon {
+    padding: 10px;
+    background: rgb(141, 143, 137);
+    color: rgb(240, 228, 228);
+    min-width: 50px;
+    text-align: center;
+  }
+  
+  .input-field {
+    width: 70%;
+    font-size: 15px;
+    border: 10px 10px;
+    border-radius: 10px;
+  }
+  
+  h2{
+    color: rgb(240, 228, 228);
+    text-align: center;
+  }
+
+  .btn {
+    color: rgb(240, 228, 228);
+    font-size: 120%;
+    float: center;
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: none;
+    background-color:  rgb(141, 143, 137);
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  .btn:hover {
+    color: rgb(46, 42, 42);
+  }
+
+header {
+  background-color: rgb(255, 255, 255)
+}
+
+
+
+body {
+  background-color: rgb(141, 143, 137)
+}
+
+div.card {
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+div.header {
+  background-color: rgb(141, 143, 137);
+  color: white;
+  padding: 10px;
+  font-size: 25px;
+}
+.error{
+  font-size: 20px;
+}

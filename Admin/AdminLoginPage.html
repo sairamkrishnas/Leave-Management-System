@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="logo.jpg" type="image/jpg">
+    <link rel="stylesheet" href="homepage.css" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Leave Management System</title>
+<style>
+body {
+  background-image: url('office.jpg');
+  background-size: cover;
+}
+</style>
+</head>
+<body>
+<header>
+  <table>
+    <tr>
+      <td>
+          <a href="HomePage.html">
+            <img src="logo.jpg" alt="Smiley face" height="180" width="230">
+          </a>
+      </td>
+      <td>
+          <h1 style="padding:20px 130px;font-style:cursive;letter-spacing: 5px;" >LEAVE  MANAGEMENT  SYSTEM</h1>
+      </td>
+    </tr>
+  </table>
+</header>
+<form action="AdminDashboard.html"form1" onsubmit="return validateForm()"style="max-width:500px;margin:auto">
+    <!--<h2 style="color: rgb(240, 228, 228);font-size: 240%;float: center;text-align: center;">Admin Login</h2>
+    <div class="input-container">
+        <h3><i class="fa fa-user icon" ></i></h3>
+      <input class="input-field" name="username" id="username" type="text">
+    </div>
+    <div class="error" id="usernameErr"> </div>
+    <div class="input-container">
+      <h3><i class="fa fa-key icon"></i></h3>
+      <input class="input-field" type="password" name="password" id="password">
+    </div>
+    <div class="error" id="passwordErr" style="color: rgb(255, 0, 0)"> </div>
+    <h3><button type="submit" class="btn" id="submit">Login</button></h3>-->
+
+    <div class="card">
+      <div class="header">
+        <h2 style="color: rgb(240, 228, 228);float: center;text-align: center;">Admin Login</h2>
+        <div class="input-container" style="float: center;text-align: center;">
+          <i class="fa fa-user icon" ></i><input class="input-field"name="username" id="username" type="text">
+         <br>
+          <span id="errorMsg" style="color:red"></span>
+        </div>
+        <div class="error" id="usernameErr"  style="color: rgb(255, 0, 0);float: center;text-align: center;">
+        </div>
+        <div class="input-container">
+        <i class="fa fa-key icon"></i><input class="input-field"type="password" name="password" id="password" required>
+        </div>
+        <div class="error" id="passwordErr" style="color: rgb(255, 0, 0);float: center;text-align: center;"> 
+        </div>
+        <h3><button type="submit"class="btn" >Login</button></h3>
+      </div>
+    </div>
+  </form>
+
+  <script>
+      function validateForm() {
+          var x = document.forms["form1"]["username"].value;
+          var y = document.forms["form1"]["password"].value;
+          if (x == null || x == "") {
+              // fill out the placeholder with a message
+             // document.getElementById("errorMsg").innerHTML = "*Name must be filled out";
+window.open("AdminDashboard.html");
+              return false;
+          }
+          if (y == null || y == "") {
+              // fill out the placeholder with a message
+              document.getElementById("errorMsg").innerHTML = "*Name must be filled out";
+              return false;
+          }
+          if (x == "") {
+
+      }
+      </script>
+</body>
+</html>
