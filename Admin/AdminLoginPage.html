@@ -31,19 +31,7 @@ body {
     </tr>
   </table>
 </header>
-<form action="AdminDashboard.html"form1" onsubmit="return validateForm()"style="max-width:500px;margin:auto">
-    <!--<h2 style="color: rgb(240, 228, 228);font-size: 240%;float: center;text-align: center;">Admin Login</h2>
-    <div class="input-container">
-        <h3><i class="fa fa-user icon" ></i></h3>
-      <input class="input-field" name="username" id="username" type="text">
-    </div>
-    <div class="error" id="usernameErr"> </div>
-    <div class="input-container">
-      <h3><i class="fa fa-key icon"></i></h3>
-      <input class="input-field" type="password" name="password" id="password">
-    </div>
-    <div class="error" id="passwordErr" style="color: rgb(255, 0, 0)"> </div>
-    <h3><button type="submit" class="btn" id="submit">Login</button></h3>-->
+<form action="AdminDashboard.html"style="max-width:500px;margin:auto">
 
     <div class="card">
       <div class="header">
@@ -61,21 +49,5 @@ body {
       </div>
     </div>
   </form>
-
-  <script>
-      function validateForm() {
-          var x = document.forms["form1"]["username"].value;
-          var y = document.forms["form1"]["password"].value;
-          if (x == null || x == "" || y == null || y == "" ) {
-            alert("You forgot to fill Username / Password");
-              window.open("AdminDashboard.html");
-              return false;
-          }
-          if (x == "admin" || y == "admin") {
-            windows.open("AdminDashboard.html");
-              return false;
-          }
-      }
-      </script>
 </body>
 </html>
