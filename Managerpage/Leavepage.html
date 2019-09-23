@@ -1,0 +1,118 @@
+<html>
+        <head>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+               
+              </head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .collapsible {
+                background-color: #777;
+                color: white;
+                cursor: pointer;
+                padding: 18px;
+                width: 100%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 15px;
+            }
+        
+                .active, .collapsible:hover {
+                    background-color: #555;
+                }
+        
+            .content {
+                padding: 0 18px;
+                display: none;
+                overflow: hidden;
+                background-color: #f1f1f1;
+            }
+        </style>
+        
+        <partial name="_StatusMessage" model="Model.StatusMessage" />
+        <h2 class="text-info py-2">LeaveRecord</h2>
+        <button class="collapsible"></button>
+        <div class="container backgroundWhite">
+            <div class="card">
+                <div class="card-header bg-dark text-light ml-0 row container">
+                    <div class="col-6">
+                        <i class="fa fa-address-card" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-6 text-right">
+                       
+                       
+                </div>
+                <div class="card-body">               
+                   <table class="table table-striped border" id="myTable">
+                        <tr class="table-secondary">
+                            <th>
+                              <label>Id</label>
+                            </th>
+                            <th>
+                                    <label>Name</label>
+                            </th>                           
+                            <th>
+                                    <label>StartDate</label>
+                            </th>
+                            <th>
+                                    <label>End date</label>
+                            </th>
+                            <th>
+                                    <label>Reason</label>
+                                    <td></td>
+                            </th> 
+                                      
+                            <th></th>
+                        </tr>
+                        <tr>
+                                <td>
+                                    <Label>1234</Label>
+                                </td>
+                                <td>
+                                        <label>VICKY</label>
+                                </td>
+                                <td>
+                                        <label>09/16/2019</label>
+                                </td>
+                                <td>
+                                        <label>09/17/2019</label>
+                                </td>
+                                <td>
+                                        <label>High fever</label>
+                                </td>
+                                <th>                                   
+                                    
+                                        <button id="demo"onclick="myFunction()">Rejected</button>  
+                                        <button id="demo1"onclick="Function()">Accept</button>  
+                                       
+                                                             
+                                        <td>
+                                                <p id="demo2"></p> 
+                                        </td>
+                                </th>         
+                               </tr>
+                        
+                    </table>
+                    <script>
+       
+       function myFunction() {
+  document.getElementById("demo").style.color = "red";
+  var text=prompt("Please Enter the reason")
+  document.getElementById("demo2").innerHTML = text;
+  
+}
+function Function() {
+  document.getElementById("demo1").style.color = "Green";
+}
+     
+
+                    </script>
+                
+            </div>
+        
+        </div>
+</html>
