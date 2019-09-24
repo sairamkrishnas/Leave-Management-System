@@ -47,6 +47,41 @@ h1{
     margin-bottom: 15px;
 
   }
+  footer{
+    color:rgb(255, 255, 255);
+    margin-top:50px;
+  }
+  footer :hover{
+    color: rgba(0, 0, 0, 0.836);
+    
+  }
+      .navbar {
+  overflow: hidden;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  }
+  
+  .navbar a {
+  float: left;
+  text-align: center;
+  text-decoration: none;
+  font-size: 10px;
+  }
+  
+  .navbar a:hover {
+  background: #ffffff;
+  }
+  .Forgot{
+    font-size: 15px;
+  }
+  h4 :hover{
+      color: rgb(177, 50, 50);
+  }
+  body {
+    background-color: rgb(141, 143, 137)
+  }
 
   
 
