@@ -9,21 +9,6 @@
               </head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
-            .collapsible {
-                background-color: #777;
-                color: white;
-                cursor: pointer;
-                padding: 18px;
-                width: 100%;
-                border: none;
-                text-align: left;
-                outline: none;
-                font-size: 15px;
-            }
-        
-                .active, .collapsible:hover {
-                    background-color: #555;
-                }
         
             .content {
                 padding: 0 18px;
@@ -31,11 +16,121 @@
                 overflow: hidden;
                 background-color: #f1f1f1;
             }
+            <style>
+  .background {
+    height: 200px;
+    background: #aaa;
+  }
+ 
+div.card {
+
+width: 30%;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+}
+
+
+
+div.header {
+
+background-color: rgb(141, 143, 137);
+
+color: white;
+
+padding: 10px;
+
+font-size: 15px;
+
+}
+
+footer{
+  color:rgb(255, 255, 255);
+  margin-top:190px;
+}
+footer :hover{
+  color: rgba(0, 0, 0, 0.836);
+}
+    .navbar {
+overflow: hidden;
+background-color: #ffffff;
+position: fixed;
+top: 0;
+width: 100%;
+}
+
+.navbar a {
+float: left;
+display: block;
+text-align: center;
+text-decoration: none;
+font-size: 10px;
+}
+
+.navbar a:hover {
+background: #ffffff;
+}
+
+body {
+    margin-bottom:10px;
+    background-color: rgb(141, 143, 137)
+}
+
+.topnav{
+  margin-top:130px;
+  height: justify;
+overflow: hidden;
+float:center;
+background-color: rgb(0, 0, 0)
+}
+
+/* Style the topnav links */
+.topnav a {
+color: rgb(255, 255, 255);
+float: left;
+text-align: center;
+padding: 10px 16px;
+text-decoration: none;
+font-size: 20px;
+}
+/* Change color on hover */
+.topnav a:hover {
+color: rgb(25, 187, 120);
+}
+    
+  
         </style>
+        <header class="navbar">
+                        <div >
+                            <table >
+                                <tr>
+                                <td>
+                                <div>
+                                <a href="HomePage.html">
+                                <img src="logo.jpg" height="130" width="150">
+                                </a>
+                                </div>
+                                </td>
+                                </tr>
+                                </table>
+                              </div>
+                    </header>
+                    <div class="topnav">
+                        <div class="w3-left">
+                            <a href="AdminDashboard.html">Dashboard</a>
+                            <a href="ManagerPAge.html">Mypage</a>
+                            
+                            </div>
+                            <div class="w3-right">
+                                <a href="AdminLoginPage.html">Logout</a>
+                            </div>
+                    </div>
+                    
+              
         
         <partial name="_StatusMessage" model="Model.StatusMessage" />
         <h2 class="text-info py-2">LeaveRecord</h2>
-        <button class="collapsible"></button>
+        
         <div class="container backgroundWhite">
             <div class="card">
                 <div class="card-header bg-dark text-light ml-0 row container">
@@ -95,7 +190,60 @@
                                         </td>
                                 </th>         
                                </tr>
-                        
+                               <tr>
+                                        <td>
+                                            <Label>1234</Label>
+                                        </td>
+                                        <td>
+                                                <label>suni</label>
+                                        </td>
+                                        <td>
+                                                <label>09/16/2019</label>
+                                        </td>
+                                        <td>
+                                                <label>09/17/2019</label>
+                                        </td>
+                                        <td>
+                                                <label>High fever</label>
+                                        </td>
+                                        <th>                                   
+                                            
+                                                <button id="demo"onclick="myFunction()">Rejected</button>  
+                                                <button id="demo1"onclick="Function()">Accept</button>  
+                                               
+                                                                     
+                                                <td>
+                                                        <p id="demo4"></p> 
+                                                </td>
+                                        </th>         
+                                       </tr>
+                                       <tr>
+                                                <td>
+                                                    <Label>1234</Label>
+                                                </td>
+                                                <td>
+                                                        <label>Sairam</label>
+                                                </td>
+                                                <td>
+                                                        <label>09/16/2019</label>
+                                                </td>
+                                                <td>
+                                                        <label>09/17/2019</label>
+                                                </td>
+                                                <td>
+                                                        <label>High fever</label>
+                                                </td>
+                                                <th>                                   
+                                                    
+                                                        <button id="demo"onclick="myFunction()">Rejected</button>  
+                                                        <button id="demo1"onclick="Function()">Accept</button>  
+                                                       
+                                                                             
+                                                        <td>
+                                                                <p id="demo3"></p> 
+                                                        </td>
+                                                </th>         
+                                               </tr>
                     </table>
                     <script>
        
@@ -103,6 +251,10 @@
   document.getElementById("demo").style.color = "red";
   var text=prompt("Please Enter the reason")
   document.getElementById("demo2").innerHTML = text;
+  document.getElementById("demo3").innerHTML = text;
+  document.getElementById("demo4").innerHTML = text;
+  
+  
   
 }
 function Function() {
@@ -113,6 +265,7 @@ function Function() {
                     </script>
                 
             </div>
-        
+
         </div>
+        
 </html>
