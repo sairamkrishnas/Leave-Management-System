@@ -3,38 +3,116 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="Img/logo.jpg" type="image/jpg">
-    <link rel="stylesheet" href="CSS/homepage.css" type="text/css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Leave Management System</title>
+    <style>
+
+footer{
+  color:rgb(255, 255, 255);
+  margin-top:100px;
+}
+footer :hover{
+  color: rgba(0, 0, 0, 0.836);
+}
+    .navbar {
+overflow: hidden;
+background-color: #ffffff;
+position: fixed;
+top: 0;
+width: 100%;
+}
+
+.navbar a {
+float: left;
+display: block;
+text-align: center;
+text-decoration: none;
+font-size: 10px;
+}
+
+.navbar a:hover {
+background: #ffffff;
+}
+
+body {
+    margin-bottom:10px;
+    background-color: rgb(141, 143, 137)
+}
+
+
+.top {
+  margin-top:130px;
+  height: justify;
+overflow: hidden;
+float:center;
+background-color: rgb(0, 0, 0)
+}
+
+/* Style the topnav links */
+.top h1 {
+color: rgb(255, 255, 255);
+float: center;
+text-align: center;
+padding: 10px 16px;
+text-decoration: none;
+font-size: 28px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  margin-top:50px;
+  height: justify;
+overflow: hidden;
+background-color: rgb(141, 143, 137)
+}
+
+/* Style the topnav links */
+.topnav a {
+color: white;
+float: center;
+text-align: center;
+padding: 10px 16px;
+text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+color: rgb(77, 181, 250);
+}
+    </style>
   </head>
   <body>
-    <header>
-      <table>
-        <tr>
-          <td>
-            <a href="HomePage.html">
-              <img src="Img/logo.jpg" alt="Smiley face" height="180" width="230">
-            </a>
-          </td>
-          <td>
-            <h1>LEAVE  MANAGEMENT  SYSTEM</h1>
-          </td>
-        </tr>
-      </table>
+    <header class="navbar">
+        <div >
+            <table >
+                <tr>
+                <td>
+                <div>
+                <a href="HomePage.html">
+                <img src="Img/logo.jpg" height="130" width="150">
+                </a>
+                </div>
+                </td>
+                </tr>
+                </table>
+              </div>
     </header>
 
-    <div class="w3-padding-25 w3-panel w3-center" >
-      <div class="nav">
-        <h2><a href="EmployeeLoginPage.html">EMPLOYEE</a></h2>
+    <div class="top w3-center" >
+        <h1>Leave Management System</h1>
+        </div>
+    <div class="topnav w3-padding-30 w3-panel w3-center" >
+        <h2><a href="EmployeeLogin.html">EMPLOYEE</a></h2>
         <br>
-        <h2><a href="ManagerLoginPage.html">MANAGER</a></h2>
+        <h2><a href="managerloginpage.html">MANAGER</a></h2>
         <br>
         <h2><a href="AdminLoginPage.html">ADMIN</a></h2>
-      </div>
+     
     </div>
-    
+    <footer>
+        <h4><a>© Hexaware Technologies. All rights reserved 2019</a></h4>
+    </footer>
   </body>
 </html>
