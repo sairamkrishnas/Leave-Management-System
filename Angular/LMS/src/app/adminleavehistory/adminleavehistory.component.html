@@ -1,0 +1,45 @@
+<app-header></app-header>
+<app-navbar></app-navbar>
+<div class="body">
+    <table class="maintable table table-hover" style="background-color: white">
+      <caption><div class="w3-left" style="color: white"><h2>Leave History of all Employees</h2></div><div class="w3-right"><input [(ngModel)]="searchText" class="form-control" type="text" placeholder="Search.." aria-label="Search"></div></caption>
+        <thead>
+          <tr>
+            <th><h2>Id</h2></th> 
+            <th><h2>LeaveId</h2></th>
+            <th><h2>Name</h2></th>
+            <th><h2>FromDate</h2></th>
+            <th><h2>ToDate</h2></th>              
+            <th><h2>Reason</h2></th>
+            <th><h2>Status</h2></th>
+          </tr>
+        </thead>
+      
+      <tbody>
+          <tr *ngFor = "let lea of leave  | adminleavehistory: {Id: searchText, name:searchText, 
+            from:searchText,to:searchText,reason:searchText,  status: searchText}">
+              <td>{{lea.Id}}</td>
+              <td>{{lea.Lid}}</td>
+              <td>{{lea.name}}</td>
+              <td>{{lea.from}}</td>
+              <td>{{lea.to}}</td>
+              <td>{{lea.reason}}</td>
+              <td>{{lea.status}}</td>
+          </tr>
+          </tbody>
+        </table>
+        <br>
+        <br>
+        <br>
+        <br><br>
+        <br>
+        <br>
+        <br><br>
+        <br>
+        <br>
+        <br><br>
+        <br>
+        <br>
+        <br>
+      </div>
+        <app-footer></app-footer>
