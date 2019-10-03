@@ -1,0 +1,57 @@
+<app-header></app-header>
+    <app-navbar></app-navbar>
+
+
+<div class="body">
+<div>
+  <br>
+  <br>
+</div>
+
+<div class="cnt-block equal-hight">
+    
+    <table *ngFor = "let a of admin">
+        <tr>
+          <h2>Welcome</h2>
+        </tr>
+        <tr>
+            <figure><img src="assets/SaiRam.jpeg" class="img-responsive" alt=""></figure>
+        </tr>
+        <tr>
+          {{a.Firstname}},{{a.Lastname}}
+        </tr>
+        <tr>
+          {{a.Id}}
+        </tr>
+        <tr>
+          {{a.Email}}
+        </tr>
+        <tr>
+          {{a.Mobile}}
+        </tr>
+        <tr>
+          {{a.Address}}
+        </tr>
+      </table>
+  </div>
+<br>
+<br>
+<br><br>
+<br>
+<br><br>
+<br>
+<br><br>
+<br>
+<br><br>
+<br>
+<br><br>
+<br>
+<br><br>
+<br>
+
+<br>
+
+
+</div>
+
+<app-footer></app-footer>

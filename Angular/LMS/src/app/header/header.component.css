@@ -1,0 +1,12 @@
+.navbar {
+    border-radius: 0px 0px 8px 8px;
+      overflow: hidden;
+      background-color: rgb(255, 255, 255);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+.navbar img{
+  margin-left: 40px;
+}
