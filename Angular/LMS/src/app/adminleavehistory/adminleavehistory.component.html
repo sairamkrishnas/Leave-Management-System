@@ -1,6 +1,8 @@
 <app-header></app-header>
 <app-navbar></app-navbar>
 <div class="body">
+  <br>
+  <br>
     <table class="maintable table table-hover" style="background-color: white">
       <caption><div class="w3-left" style="color: white"><h2>Leave History of all Employees</h2></div><div class="w3-right"><input [(ngModel)]="searchText" class="form-control" type="text" placeholder="Search.." aria-label="Search"></div></caption>
         <thead>
@@ -16,7 +18,7 @@
         </thead>
       
       <tbody>
-          <tr *ngFor = "let lea of leave  | adminleavehistory: {Id: searchText, name:searchText, 
+          <tr *ngFor = "let lea of leave  | adminleavehistory: {Id: searchText, Lid:searchText,name:searchText, 
             from:searchText,to:searchText,reason:searchText,  status: searchText}">
               <td>{{lea.Id}}</td>
               <td>{{lea.Lid}}</td>
@@ -24,22 +26,18 @@
               <td>{{lea.from}}</td>
               <td>{{lea.to}}</td>
               <td>{{lea.reason}}</td>
-              <td>{{lea.status}}</td>
+              <td>
+                  <div *ngIf="lea.status=='Approved'; else notShow">
+                      <span class="btn btn-success">Approved</span>
+                    </div>
+                    
+                    <ng-template #notShow>
+                        <span class="btn btn-danger">Rejected</span>
+                    </ng-template>
+              </td>
           </tr>
           </tbody>
         </table>
-        <br>
-        <br>
-        <br>
-        <br><br>
-        <br>
-        <br>
-        <br><br>
-        <br>
-        <br>
-        <br><br>
-        <br>
-        <br>
-        <br>
+        <br><br><br><br>
       </div>
         <app-footer></app-footer>

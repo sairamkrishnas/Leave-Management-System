@@ -17,5 +17,8 @@ export class AdminholidayviewComponent implements OnInit {
     error => this.errorMsg = error
     );
   }
+/*   Remove(index){
+    this.holidays.splice(index,1);
+  } */
 
 }

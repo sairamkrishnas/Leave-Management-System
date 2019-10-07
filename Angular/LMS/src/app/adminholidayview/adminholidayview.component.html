@@ -1,38 +1,46 @@
+
 <app-header></app-header>
-  <app-navbar></app-navbar>
+<app-navbar></app-navbar>
+
 <div class="body">
-    <table class="table table-hover" style="background-color: white">
-      <caption><div class="w3-left"style="color: white"><h2>Holidays List</h2></div><div class="w3-right"><input [(ngModel)]="searchText" class="form-control" type="text" placeholder="Search.." aria-label="Search"></div></caption>
-        <thead>
-          <tr>
-            <th><h2>Date</h2></th>              
-            <th><h2>Day</h2></th>
-            <th><h2>Holiday</h2></th>
-          </tr>
-        </thead>
-      
-      <tbody>
-          <tr *ngFor = "let hol of holidays  | adminleavehistory: {date: searchText, day:searchText, 
-            holiday:searchText}">
-              <td>{{hol.date}}</td>
-              <td>{{hol.day}}</td>
-              <td>{{hol.holiday}}</td>
-          </tr>
-          </tbody>
-        </table>
-<br>
-<br>
-<br>
-<br><br>
-<br>
-<br>
-<br><br>
-<br>
-<br>
-<br><br>
-<br>
-<br>
-<br>
+  <br>
+  <br>
+  <div class="w3-center" style="color: white">
+    <h1>HOLIDAY LIST</h1>
+  </div>
+  <table class="table table-hover" style="background-color: white">
+    <caption>
+      <div class="w3-left"style="color: white">
+        <span routerLink="/adminholidayadd" routerLinkActive="active" class="btn btn-success">
+          + ADD
+        </span>
+      </div>
+      <div class="w3-right">
+        <input [(ngModel)]="searchText" class="form-control" type="text" placeholder="Search.." aria-label="Search">
+      </div>
+    </caption>
+    <thead>
+      <tr>
+        <th><h2>Date</h2></th>              
+        <th><h2>Day</h2></th>
+        <th><h2>Holiday</h2></th>
+        <th><h2></h2></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let hol of holidays | adminleavehistory: {date: searchText, day:searchText, 
+        holiday:searchText}; let i = index">
+        <td>{{hol.date}}</td>
+        <td>{{hol.day}}</td>
+        <td>{{hol.holiday}}</td>
+        <td>
+          <span class="btn fa fa-edit" style="background-color: rgb(45, 132, 247);color: white"></span>
+          <!-- <span *ngIf="hol.holiday!='New year'" (click)="Remove(i)" class="w3-right btn btn-danger fa fa-trash"></span> -->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br><br><br><br>
 </div>
 
-        <app-footer></app-footer>
+<app-footer></app-footer>
