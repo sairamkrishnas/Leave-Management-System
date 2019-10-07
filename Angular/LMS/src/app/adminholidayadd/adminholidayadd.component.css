@@ -3,7 +3,8 @@
   max-width: 500px;
 }
 .body{
-  background-color: #757761;
+  background-color: #48465c;
+  color: white;
 }
 .invalid-feedback{
   color: red;

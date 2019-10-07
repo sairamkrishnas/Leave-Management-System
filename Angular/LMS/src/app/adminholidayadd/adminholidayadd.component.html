@@ -1,9 +1,11 @@
 <app-header></app-header>
 <app-navbar></app-navbar>
 <div class="body">
+  <br>
+  <br>
         <div class="container">
             <div class="row">
-                    <h1 class="w3-center">Add Holiday Form</h1>
+                    <h1 class="w3-center">Add Holiday</h1>
           <!--           <p>form1 works!</p>
                     <div class="container-fluid">
                         <h1>BootCamp Enrollment Form</h1>
@@ -78,15 +80,15 @@
                         <div class="form-group">
                             <label for="reason">Reason:</label>
                             <textarea type="text" class="form-control" name="reason" [(ngModel)]="model.reason" #reason="ngModel" 
-                            placeholder="Please write reason.." style="height:200px" [ngClass]="{ 'is-invalid': f.submitted && reason.invalid }" required>
+                            placeholder="Please write reason.." style="height:100px" [ngClass]="{ 'is-invalid': f.submitted && reason.invalid }" required>
                             </textarea>
                                 <div *ngIf="f.submitted && reason.invalid" class="invalid-feedback">
                                 <div *ngIf="reason.errors.required">** Reason is required.</div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <button type="submit" style="margin: 20px;" class="btn btn-primary">Add</button>
-                            <button type="reset" style="margin: 20px;" class="btn btn-primary">Cancel</button>
+                            <button type="submit" style="margin: 20px;" class="btn btn-success">Add</button>
+                            <button type="reset" style="margin: 20px;" class="btn btn-danger">Cancel</button>
                         </div>
                     </form> 
                 </div>

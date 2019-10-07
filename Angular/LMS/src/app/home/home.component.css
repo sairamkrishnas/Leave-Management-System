@@ -14,7 +14,7 @@ agm-map {
   color: rgb(122, 204, 56);
 }
   .topnav{
-    margin-top: 72px;
+    margin-top: 83px;
     height: justify;
   overflow: hidden;
 
@@ -99,7 +99,7 @@ agm-map {
   }
   .slide-wrapper {
     width: 2912px;
-    -webkit-animation: slide s ease infinite;
+    -webkit-animation: slide 18s ease infinite;
   }
   agm-map {
     height: 300px;
