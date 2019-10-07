@@ -1,0 +1,221 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<header class="navbar">
+  <a href="#"><img src="assets/logo.jpg" height="70" width="100"></a>
+</header>
+<app-navigation></app-navigation>
+<!--<div class="topnav">
+  <div class="w3-left">
+    <a href="#">View Holidays</a>
+    <a href="#">View Leave history</a>
+    <a href="#">AddHolidays</a> 
+    <a href="#"><span class="fa fa-home"></span> Admin</a>
+  </div>
+  <div class="w3-right">
+    <a href="#"><span class="fa fa-sign-out"></span> Logout</a>
+  </div>
+</div>
+          <div class="topnav">
+                <div class="w3-left">
+                    <a routerLink="/employee-dashboard" routerLinkActive="active">Dashboard</a>
+                    <a routerLink="/employee-details-display" routerLinkActive = "active">Employee Details</a>
+                    <a routerLink="/manager-details" routerLinkActive="active">Manager Details</a>
+                    <a routerLink = "/apply-leave" routerLinkActive = "active">Apply Leave</a>
+                    <a routerLink = "/employeeleavehistory" routerLinkActive = "active">Leave History</a>
+                </div>
+                <div class="w3-right">
+                        <a routerLink = "/login" routerLinkActive = "active">Logout</a>
+                </div>
+                    
+            </div>-->
+          
+            <!--</div>
+            <h3><b>My Details Section</b></h3>
+            
+            <div>  
+                        <div class = "w3-right"> 
+                                        <img src="employee.jpg" width="200" height="200">
+                        </div>
+                    <div>
+                    <table class="tp w3-center">
+                        <tr>
+                            <td>
+                                    <p>Employee ID</p>
+                            </td>
+                            <td>
+                                    <input type="number" value="39221" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                        <p>First Name</p>
+                            </td>
+                            <td>
+                                        <input type="text" value="Sunishma Reddy" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                                <td>
+                                        <p>Last Name</p>
+                                </td>
+                                <td>
+                                        <input type="text" value="Suram" disabled>
+                                 </td>
+                        </tr>
+                        <tr>
+                                <td>
+                                        <p>Email ID</p>
+                                </td>
+                                <td>
+                                        <input type="text" value="Sunishmas@hexaware.com" disabled>
+                                 </td>
+                        </tr>
+                        <tr>
+                                <td>
+                                        <p></p>Mobile
+                                </td>
+                                <td>
+                                        <input type="number" value="203430031" disabled>
+                                 </td>
+                        </tr>
+                        <tr>
+                                <td>
+                                        <p>Date of Join</p>
+                                </td>
+                                <td>
+                                        <input type="text" value="09/16/2019" disabled>
+                                 </td>
+                        </tr>
+                        <tr>
+                                <td>
+                                        <p>Department</p>
+                                </td>
+                                <td>
+                                        <input type="text" value="Software" disabled>
+                                 </td>
+                        </tr>
+                    </table>
+                    <div class = "w3-center">
+                            <p>Available Leave Balance<input type = "number" value ="20" disabled></p>
+                    </div>
+                </div>-->
+               
+
+<div class="card">
+    
+        <img src="assets\suni.jpeg" alt="Sunishma" style="width:45% ; border-radius:140px;" >
+        <br>
+
+    <table>
+        <br>
+        <tr>
+            <td align = left>
+                <b>Employee ID</b>
+            </td>
+            <td align = left>
+                {{EmployeeID}}
+            </td>   
+        </tr>
+        <br>
+        <tr>
+            <td align = left>
+                <b>First Name </b>
+            </td>
+            <td align = left>
+                {{FirstName}}
+            </td>  
+        </tr>
+        <br>
+        <tr>
+            <td align = left>
+               <b> Last Name</b>
+            </td>
+            <td align = left>
+                {{LastName}}
+            </td> 
+              
+        </tr>
+        <br>
+        <tr >
+            <td align = left>
+                <b>Email Address</b>
+            </td>
+            <td align = left>
+                {{EmailAddress}}
+            </td>   
+        </tr>
+        <br>
+        <tr>
+            <td align = left>
+               <b> Mobile</b>
+            </td>
+            <td align = left>
+                {{Mobile}}
+            </td>   
+        </tr>
+        <br>
+        <tr>
+                <td align = left>
+                   <b> Department</b>
+                </td>
+                <td align = left>
+                    {{Department}}
+                </td>   
+            </tr>
+            <br>
+            <tr>
+                <td align = left>
+                   <b> Address</b>
+                </td>
+                <td align = left>
+                    {{Address}}
+                </td>   
+            </tr>
+            <br>
+            <tr>
+                <td align = left>
+                   <b> City</b>
+                </td>
+                <td align = left>
+                    {{City}}
+                </td>   
+            </tr>
+            <br>
+            <tr>
+                <td align = left>
+                   <b> State</b>
+                </td>
+                <td align = left>
+                    {{State}}
+                </td>   
+            </tr>
+            <br>
+            <tr>
+                <td align = left>
+                   <b> Postal Code</b>
+                </td>
+                <td align = left>
+                    {{PostalCode}}
+                </td>   
+            </tr>
+            <br>
+        </table>
+         <br>
+  <p><button>Details</button></p>
+  <br>
+  <br>
+
+
+</div>
+
+                 
+    <footer>
+            <p>© Hexaware Technologies. All rights reserved 2019</p>
+    </footer>
+

@@ -1,0 +1,256 @@
+footer{
+  position:fixed;
+  bottom: 0;
+  width: 100%;        
+  background: #333;
+  color: #fff;
+}
+
+.topnav{
+margin-top: 40px;
+height: justify;
+overflow: hidden;
+float:center;
+background-color: #000000;
+
+}
+
+.navbar {
+border-radius: 0px 0px 8px 8px;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+  
+.topnav a {
+  float: right;
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 14px;
+  text-decoration: none;
+  font-size: 18px;
+ 
+}
+
+.topnav a:hover {
+  background:  rgb(0, 0, 0);
+  color: rgb(122, 204, 56);
+}
+
+
+.section{
+    clear: both;
+    border-radius: 5px;
+    color:white;
+    font-size: large;
+    padding: 50px ;
+    float: left;
+    margin: 50px;
+    width: 50%;
+}
+      
+
+  
+  
+  .navbar a {
+  float: left;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 10px;
+  }
+  
+  .navbar a:hover {
+  background: #ffffff;
+  }
+  
+  body {
+      margin-bottom:10px;
+      background-color: rgb(141, 143, 137)
+  }
+  .tp{
+    margin-top: 80px;
+    margin-left: 80px;
+  
+  }
+  .nw{
+      color: rgb(255, 255, 255);
+      text-align: center;
+      padding: 10px 16px;
+      text-decoration: none;
+      font-size: 20px;
+      }
+      .nw :hover{
+        color: rgb(0, 0, 0);
+      }
+  
+  .topnav{
+    margin-top:72px;
+    height: justify;
+  overflow: hidden;
+  float:center;
+  background-color: rgb(0, 0, 0)
+  }
+  .ap{
+  margin-left: 5px;
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
+  color: rgb(255, 255, 255);
+  float: left;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  }
+  /* Change color on hover */
+  .topnav a:hover {
+  color: rgb(25, 187, 120);
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Add padding to containers */
+  .container {
+    padding: 16px;
+    background-color: white;
+    margin-left: 30%;
+    max-width: 40%;
+  }
+  
+  /* Full-width input fields */
+  input[type=text]{
+    width: 60%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Overwrite default styles of hr */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+  /* Set a style for the submit button */
+  .registerbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 10px;
+    font-size: 18px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    opacity: 0.9;
+    border-radius: 8px;
+  }
+  
+  .registerbtn:hover {
+    opacity: 7;
+  }
+  
+  /* Add a blue text color to links */
+  
+  
+  /* Set a grey background color and center the text of the "sign in" section */
+  .signin {
+    background-color: #f1f1f1;
+    text-align: center;
+  }
+  .test{
+    margin-left: 30%;
+    max-width: 40%;
+  }
+  footer{
+    position:fixed;
+    bottom: 0;
+    width: 100%;        
+    background: #333;
+    color: #fff;
+  }
+  .topnav{
+    margin-top: 72px;
+    height: justify;
+    overflow: hidden;
+    float:center;
+    background-color: #000000;
+    
+    }
+    
+    .navbar {
+    border-radius: 0px 0px 8px 8px;
+      overflow: hidden;
+      background-color: rgb(255, 255, 255);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+      
+    .topnav a {
+      float: right;
+      display: block;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px 14px;
+      text-decoration: none;
+      font-size: 18px;
+     
+    }
+    
+    .topnav a:hover {
+      background:  rgb(0, 0, 0);
+      color: rgb(122, 204, 56);
+    }
+   
+    .tp{
+      margin-top: 80px;
+      margin-left: 80px;
+    
+    }
+    /* Style the topnav links */
+    .topnav a {
+    color: rgb(255, 255, 255);
+    float: left;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    }
+    /* Change color on hover */
+    .topnav a:hover {
+    color: rgb(25, 187, 120);
+    }
+    body{
+      margin:0;
+      background-color: grey;
+  }
+  
+   header{
+       background: White;
+       color: black;
+       
+  }
+  
+    
+    body {
+        margin-bottom:10px;
+        background-color: rgb(141, 143, 137)
+    }
+    
