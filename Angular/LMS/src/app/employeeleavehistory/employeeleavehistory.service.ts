@@ -11,6 +11,6 @@ export class EmployeeLeaveHistoryService {
   constructor(private httpClient:HttpClient) { }
 
 getEmpLeaveHistory():Observable<EmpLeaveHistory[]>{
-  return this.httpClient.get<EmpLeaveHistory[]>("assets/leavehistory.json");
+  return this.httpClient.get<EmpLeaveHistory[]>("assets/empleavehistory.json");
 }
 }
