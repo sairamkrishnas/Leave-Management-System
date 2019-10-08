@@ -1,0 +1,97 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<header class="navbar">
+  <a href="#"><img src="assets/logo.jpg" height="70" width="100"></a>
+</header>
+<app-navigation></app-navigation>
+<!--<div class="topnav">
+  <div class="w3-left">
+    <a href="#">View Holidays</a>
+    <a href="#">View Leave history</a>
+    <a href="#">AddHolidays</a> 
+    <a href="#"><span class="fa fa-home"></span> Admin</a>
+  </div>
+  <div class="w3-right">
+    <a href="#"><span class="fa fa-sign-out"></span> Logout</a>
+  </div>
+</div>
+          <div class="topnav">
+                <div class="w3-left">
+                    <a routerLink="/employee-dashboard" routerLinkActive="active">Dashboard</a>
+                    <a routerLink="/employee-details-display" routerLinkActive = "active">Employee Details</a>
+                    <a routerLink="/manager-details" routerLinkActive="active">Manager Details</a>
+                    <a routerLink = "/apply-leave" routerLinkActive = "active">Apply Leave</a>
+                    <a routerLink = "/employeeleavehistory" routerLinkActive = "active">Leave History</a>
+                </div>
+                <div class="w3-right">
+                        <a routerLink = "/login" routerLinkActive = "active">Logout</a>
+                </div>
+                    
+            </div>-->
+            
+            <br>
+            <h1 align = "center">My Leave History</h1>
+            <br>
+            <button class="btn" [routerLink] = "['/apply-leave']" routerLinkActive="active">New Leave Application</button>
+            <br>
+            <br>
+            <br>
+            <div class="container">
+                    <div class="table-responsive">          
+                    <table class="table table-hover">
+                      <thead style = "background-color: rgb(180, 248, 239)">
+                        <tr>
+                          <th><b>LeaveID</b></th>
+                          <th><b>Start Date</b></th>
+                          <th><b>End Date</b></th>
+                          <th><b>Number of Days</b></th>
+                          <th><b>Leave Type</b></th>
+                         
+                          <th><b>Applied On</b></th>
+                          <th><b>Manager Comments</b></th>
+                          <th><b>Status</b></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor = "let lea of leave">
+                          <td>{{lea.LID}}</td>
+                          <td>{{lea.StartDate}}</td>
+                          <td>{{lea.EndDate}}</td>
+                          <td align = "center">{{lea.NDays}}</td>
+                          <td>{{lea.LeaveType}}</td>
+                         
+                          <td>{{lea.AppliedOn}}</td>
+                          <td>{{lea.MComments}}</td>
+                          <td>
+                            <div *ngIf="lea.Status=='Approved'">
+                              <span class="btn btn-success">Approved</span>
+                            </div>
+                            <div *ngIf="lea.Status=='Rejected'">
+                              <span class = "btn btn-danger">Rejected</span>
+                            </div>
+                            <div *ngIf="lea.Status=='Pending'">
+                              <span class = "btn " style="background-color: rgb(104, 171, 247);color:white;">Pending</span>
+                            </div>
+                          </td>
+                          
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                  </div>
+                  <br>
+                  <br>
+
+                  
+              
+    <footer>
+            <p>© Hexaware Technologies. All rights reserved 2019</p>
+        </footer>
+

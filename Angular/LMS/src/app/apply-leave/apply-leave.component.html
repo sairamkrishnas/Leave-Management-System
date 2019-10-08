@@ -1,0 +1,230 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<header class="navbar">
+  <a href="#"><img src="assets/logo.jpg" height="70" width="100"></a>
+</header>
+<app-navigation></app-navigation>
+
+<!--<div class="topnav">
+  <div class="w3-left">
+    <a href="#">View Holidays</a>
+    <a href="#">View Leave history</a>
+    <a href="#">AddHolidays</a> 
+    <a href="#"><span class="fa fa-home"></span> Admin</a>
+  </div>
+  <div class="w3-right">
+    <a href="#"><span class="fa fa-sign-out"></span> Logout</a>
+  </div>
+</div>-->
+          <!--<div class="topnav">
+                <div class="w3-left">
+                    <a routerLink="/employee-dashboard" routerLinkActive="active">Dashboard</a>
+                    <a routerLink="/employee-details-display" routerLinkActive = "active">Employee Details</a>
+                    <a routerLink="/manager-details" routerLinkActive="active">Manager Details</a>
+                    <a routerLink = "/apply-leave" routerLinkActive = "active">Apply Leave</a>
+                    <a routerLink = "/employeeleavehistory" routerLinkActive = "active">Leave History</a>
+                </div>
+                <div class="w3-right">
+                        <a routerLink = "/login" routerLinkActive = "active">Logout</a>
+                </div>
+                    
+            </div>-->
+          <!--<form >
+            <div class="container">
+              <h1>Leave Application</h1>
+              
+              <hr>
+              <table>
+              <tr>
+                <td>
+                     <label for="startdate"><b>Start Date</b></label>
+                </td>
+                <td>              
+                    <input class = "fa fa-calender" aria-hidden="true" type="date" placeholder="Enter start date" name="startdate" required>
+                </td>
+                </tr>
+
+              <br>
+          <tr>
+              <td>
+              <label for="startdate"><b>End Date</b></label>
+            </td>
+        <td>
+              <input class = "fa fa-calender" type="date" placeholder="Enter end date" name="enddate" required>
+            </td>
+            </tr>
+              <br>
+          <tr>
+              <td>
+              <label for="days"><b>Number of Days</b></label>
+            </td>
+        <td>
+              <input type="number" placeholder="Days" name="days" required>
+            </td>
+            </tr>
+              <br>
+        <tr>  
+            <td>            
+              <label for="days"><b>Leave Type</b></label>
+            </td>
+            <td>
+              <input type="radio" name="Ltype" value="Sick"> Sick
+              <input type="radio" name="Ltype" value="Earned"> Earned
+              <input type="radio" name="Ltype" value="Mleave"> Maternity 
+              <input type="radio" name="Ltype" value="Other"> Other
+            </td>
+            </tr>
+
+              <br>
+<tr>
+    <td>
+              <label for="leavereason"><b>Leave Reason</b></label>
+            </td>
+        <td>
+              <input type="text" placeholder="Enter a reason" name="reason" required>
+            </td>
+            </tr>
+            </table>
+              
+              <br>
+              <hr>
+              
+          
+              <button type="submit" class="registerbtn" (click)="applyleaveemp()">Apply</button>
+            </div>
+            
+          </form>
+          <br>
+          <br>-->
+          
+          <!--<div class="topnav">
+                <div class="w3-left">
+                    <a href="EmployeeDashboard.html">Dashboard</a>
+                    <a href="ManagerDetails.html">Manager Details</a>
+                    <a href="MyLeaveApplication.html">Apply Leave</a>
+                    <a href="MyLeaveHistory.html">Leave History</a>
+                    </div>
+                    <div class="w3-right">
+                            <a href="EmployeeLogin.html">Logout</a>
+                        </div>
+            </div>
+            <div>
+                <table class="tp w3-center">
+                    <tr>
+                        <td>
+                                <p>Start Date</p>
+                        </td>
+                        <td>
+                                <input type="date" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                    <p>End date</p>
+                        </td>
+                        <td>
+                                    <input type="date" >
+                        </td>
+                    </tr>
+                    <tr>
+                            <td>
+                                    <p>Number of days</p>
+                            </td>
+                            <td>
+                                    <input type="number">
+                             </td>
+                    </tr>
+                    <tr>
+                            <td>
+                                    <p>Leave Type</p>
+                            </td>
+                            <td>
+                                <input type="radio" name="Ltype" value="Sick"> Sick
+                                <input type="radio" name="Ltype" value="Earned"> Earned
+                                <input type="radio" name="Ltype" value="Mleave"> Maternity 
+                                 <input type="radio" name="Ltype" value="Other"> Other
+                             </td>
+                    </tr>
+                    <tr>
+                            <td>
+                                    <p>Leave Reason</p>
+                            </td>
+                            <td>
+                                    <input type="text" ><br>
+                             </td>
+                    </tr>
+                    
+                    
+                </table>
+               </div>-->
+               <div class="body">
+                 <div class = "container">
+                   <div class = "row">
+                     <h1 class = "w3-center">Leave Request Application</h1>
+                     <br>
+                     <br>
+                     <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+                     <div class="form-group">
+                        <label for="sdate">Start Date:</label>
+                         <input type="date" class="form-control" name="sdate" [(ngModel)]="model.sdate" #sdate="ngModel" [ngClass]="{ 'is-invalid': f.submitted && sdate.invalid }" required />
+                         <div *ngIf="f.submitted && sdate.invalid">
+                            <div *ngIf="sdate.errors.required" style="color:red;">*Please select a date</div>
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <label for="edate">End Date:</label>
+                         <input type="date" class="form-control " name="edate" [(ngModel)]="model.edate" #edate="ngModel" [ngClass]="{ 'is-invalid': f.submitted && edate.invalid }" required />
+                         <div *ngIf="f.submitted && edate.invalid" >
+                            <div *ngIf="edate.errors.required" style="color:red;">*Please select a date</div>
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <label for="day">Number of days:</label> <br>
+                         <input type="number" name="day" [(ngModel)]="model.day" #day="ngModel" [ngClass]="{ 'is-invalid': f.submitted && day.invalid }" required />
+                           
+                         <div *ngIf="f.submitted && day.invalid" >
+                            <div *ngIf="day.errors.required" style="color:red;">*Enter number of days</div>
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <label for="Ltype">Leave Type:</label>
+                        <select class="form-control" name="Ltype" [(ngModel)]="model.Ltype" #Ltype="ngModel" [ngClass]="{ 'is-invalid': f.submitted && Ltype.invalid }" required >
+                          <option value ="none"selected disabled hidden>Select any option</option>  
+                          <option value="Sick">Sick</option>
+                            <option value="Earned">Earned</option>
+                            <option value="Maternity">Maternity</option>
+                            <option value="Others">Others</option>
+                        </select>
+                        <div *ngIf="f.submitted && Ltype.invalid">
+                            <div *ngIf="Ltype.errors.required" style="color:red;">*Please select one option</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="reason">Leave Reason:</label>
+                        <textarea type="text" class="form-control" name="reason" [(ngModel)]="model.reason" #reason="ngModel" 
+                        placeholder="Please write reason.." style="height:100px" [ngClass]="{ 'is-invalid': f.submitted && reason.invalid }" required>
+                        </textarea>
+                            <div *ngIf="f.submitted && reason.invalid">
+                            <div *ngIf="reason.errors.required" style="color:red;"> *Please enter a reason </div>
+                        </div>
+                    </div>
+                    <div class="form-group" >
+                        <button  type="submit" style="margin:5px; padding: 10px 20px; background-color: rgb(28,94,30); border-color: rgb(28,94,30) ;" class="btn btn-primary"> Apply </button>
+                        <button  type="reset"style="margin:5px; padding: 10px 20px;  background-color: rgb(168,14,14); border-color: rgb(168,14,14); " class="btn btn-primary">Cancel</button>
+                    </div>
+                     </form>
+                   </div>
+                 </div>
+               </div>
+              	
+                			
+        <footer>
+                <p>© Hexaware Technologies. All rights reserved 2019</p>
+            </footer>
+    

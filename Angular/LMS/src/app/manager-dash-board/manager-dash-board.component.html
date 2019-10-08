@@ -1,0 +1,87 @@
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  
+ <app-header></app-header>
+ <div style="background:#48465c;color:white">
+ <nav class="navbar navbar-inverse"style="margin-top:72px;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+       
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a  routerLink="/leave-page" routerLinkActive="active">LeavePage</a></li>
+       
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+
+<div>
+  <div class="w3-left">
+      <div class="card">
+          <div class="card-body">      
+             <img src="assets/imagee.png" alt="Avatar" style="width:100px;height:100px;">   
+          </div>
+          <div class="w3-right">
+            <h4><b>Name:</b>Vikneswaran</h4>
+            <br>
+            <h4><b>Employee Id:</b>34234324</h4>
+            <br>
+            <h4><b>Employee Email ID:</b>Vicky@gmail.com</h4>
+          </div>
+        </div> 
+       
+  </div>
+  
+</div>
+
+<br>
+
+
+            <div class="card-body" >      
+            <table class="table table-hover"style="background:white;color:black">
+            <thead>
+              <tr>
+                    <th><h3>Id</h3></th>
+                <th><h3>Firstname</h3></th>              
+                <th><h3>Email</h3></th>
+                <th><h3>Start date</h3></th>
+                <th><h3>end date</h3></th>               
+                <th><h3>Status</h3></th>
+                <th><h3>Reason</h3></th>
+              </tr>
+            </thead>
+          
+          <tbody>
+                <tr *ngFor = "let emp of holidays">
+                        <td>{{emp.id}}</td>
+                  <td>{{emp.Firstname}}</td>
+            <td>{{emp.Email}}</td>
+            <td>{{emp.Startdate}}</td>
+            <td>{{emp.enddate}}</td>
+            <td>{{emp.Status}}</td>
+            <td>{{emp.Reason}}</td>
+            <td><button type = "submit" style ="background-color: #4caf50; border-color: #4caf50;"class="btn btn-primary">Accept</button></td>
+            <td><button type = "reset" style ="background-color: #f43f3f; border-color: #f43f3f;" class="btn btn-primary">Reject</button></td>
+                </tr>
+              </tbody>
+            </table>
+           
+    </div>
+    
+</div>
+
+
+<app-footer></app-footer>
