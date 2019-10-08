@@ -1,0 +1,11 @@
+
+.container{
+  max-width: 500px;
+}
+.body{
+  background-color: #48465c;
+  color: white;
+}
+.invalid-feedback{
+  color: red;
+}

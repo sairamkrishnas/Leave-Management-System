@@ -1,0 +1,42 @@
+
+.Forgot{
+    font-size: 15px;
+  }
+.w3-left{
+    margin-left: 15px;
+}
+div.card {
+    margin-left: 440px;
+    margin-top: 140px;
+    width: 30%;
+    background-color: rgb(141, 143, 137);
+  
+    color: white;
+  
+    padding: 10px;
+  
+    font-size: 15px;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 8px 24px 0 rgba(0, 0, 0, 0.19);
+  
+  }
+  .body{
+    background-color: rgb(113, 139, 131);
+  }
+.title{
+    margin-top:75px;
+    background-color:#333;
+    color: #fff;
+}
+
+.fixed-header{
+    width: 100%;
+    position: fixed;
+    background: rgb(255, 255, 255);
+    padding: 0px 0;
+    color: rgb(0, 0, 0);
+}
+
+.fixed-header{
+    top: 0;
+    left:0;
+}
