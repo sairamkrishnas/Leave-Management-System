@@ -16,6 +16,8 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AgmCoreModule } from '@agm/core';
+import { MatDialogModule } from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -44,12 +46,15 @@ import { AgmCoreModule } from '@agm/core';
       { path: 'adminholidayview', component: AdminholidayviewComponent }],),
     FormsModule, 
     HttpClientModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
     BrowserModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyA3jd636bBrRo6a8IZ5LnHtKpjE1aFnmQM'
     })
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[AdminholidayaddComponent]
 })
 export class AppModule { }

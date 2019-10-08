@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminholidayviewService } from './adminholidayview.service'
-@Component({
+/* import {MatDialog,MatDialogConfig} from '@angular/material'
+import { AdminholidayaddComponent } from '../adminholidayadd/adminholidayadd.component'; */
+@Component({ 
   selector: 'app-adminholidayview',
   templateUrl: './adminholidayview.component.html',
   styleUrls: ['./adminholidayview.component.css']
@@ -17,6 +19,13 @@ export class AdminholidayviewComponent implements OnInit {
     error => this.errorMsg = error
     );
   }
+/*   create(){
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = "60%";
+    this.dialog.open(AdminholidayaddComponent, dialogConfig);
+  } */
 /*   Remove(index){
     this.holidays.splice(index,1);
   } */
