@@ -1,0 +1,100 @@
+<app-header></app-header>
+<app-navbar></app-navbar>
+<div class="body">
+  <br>
+  <br>
+        <div class="container">
+            <div class="row">
+                    <h1 class="w3-center">Add Holiday</h1>
+          <!--           <p>form1 works!</p>
+                    <div class="container-fluid">
+                        <h1>BootCamp Enrollment Form</h1>
+                        <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+                          {{userForm.value | json}}
+                        <hr/>
+                            {{userModle|json}}
+                        <div class="form-group">
+                          <label>Name</label>
+                          <input type="text" class="form-control" name="userName" [(ngModel)]='userName' >
+                        </div>
+                        <div class="form-group">
+                            <label>email</label>
+                            <input type="email" class="form-control" name="email" [(ngModel)]='email' >
+                          </div>
+                          <div class="form-group">
+                              <label>phone</label>
+                              <input type="tel" class="form-control" name="phone" [(ngModel)]='phone'>
+                            </div>
+                              
+                            <div class="form-group">
+                          <select class="custom-select" name="topic" [(ngModel)]='topic'>
+                            <option value ="">I am interested in</option>
+                            <option *ngFor="let topic of topics">{{topic}}</option>
+                          </select>
+                            </div>
+                            
+                            <div class="mb-3">
+                              <label>Time Preferences</label>
+                              <div class="form-check">
+                                <input class="form-check-input" [(ngModel)]="timePreferences" type="radio" name="tf" value="morning">
+                                <label class="form-check-label"> Morning(9 Am to 12 Pm)</label>
+                              </div>
+                        
+                              <div class="form-check">
+                                <input class="form-check-input" [(ngModel)]="timePreferences" type="radio" name="tf" value="evening">
+                                <label class="form-check-label"> Evening(5 Pm to 8 Pm)</label>
+                              </div>
+                            </div>
+                            <div class="form-check mb-3">
+                              <input class="form-check-input" name="subscribe" [(ngModel)]='subscribe' type="checkbox">
+                              <label class="form-check-label">Send me promotional Offers</label>
+                            </div>
+                            <button class="btn btn-primary">submit</button>
+                        </form>
+                        </div> -->
+             <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+                    <div class="form-group">
+                            <label for="Ltype">Holiday Name:</label>
+                            <select class="form-control" name="Ltype" [(ngModel)]="model.Ltype" #Ltype="ngModel" [ngClass]="{ 'is-invalid': f.submitted && Ltype.invalid }" required >
+                                <option value="none" selected disabled hidden> Select an Option </option>
+                                <option value="Martin Luther">Birthday of Martin Luther King Jr</option>
+                                <option value="Washington">Washington's Birthday</option>
+                                <option value="Memorial">Memorial Day</option>
+                                <option value="Labor">Labor Day</option>
+                                <option value="Columbus">Columbus Day</option>
+                                <option value="Thanksgiving">Thanksgiving Day</option>
+                                <option value="Others">Others</option>
+                            </select>
+                            <div *ngIf="f.submitted && Ltype.invalid" class="invalid-feedback">
+                                <div *ngIf="Ltype.errors.required">**You have to select leave type</div>
+                            </div>
+                        </div>       
+                <div class="form-group">
+                            <label for="date">Select Date:</label>
+                            <input type="date" class="form-control fa fa-calendar" name="date" [(ngModel)]="model.date" #date="ngModel" [ngClass]="{ 'is-invalid': f.submitted && date.invalid }" required />
+                            <div *ngIf="f.submitted && date.invalid" class="invalid-feedback">
+                                <div *ngIf="date.errors.required">**You Have to select Date.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="reason">Reason:</label>
+                            <textarea type="text" class="form-control" name="reason" [(ngModel)]="model.reason" #reason="ngModel" 
+                            placeholder="Please write reason.." style="height:100px" [ngClass]="{ 'is-invalid': f.submitted && reason.invalid }" required>
+                            </textarea>
+                                <div *ngIf="f.submitted && reason.invalid" class="invalid-feedback">
+                                <div *ngIf="reason.errors.required">** Reason is required.</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" style="margin: 20px;" class="btn btn-success">Add</button>
+                            <button type="reset" style="margin: 20px;" class="btn btn-danger">Cancel</button>
+                        </div>
+                    </form> 
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+        </div>
+<app-footer></app-footer>

@@ -1,0 +1,240 @@
+footer{
+    color:rgb(255, 255, 255);
+    margin-top:1000px;
+  }
+  footer :hover{
+    color: rgba(0, 0, 0, 0.836);
+  }
+      .navbar {
+  overflow: hidden;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  }
+  
+  .navbar a {
+  float: left;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 10px;
+  }
+  
+  .navbar a:hover {
+  background: #ffffff;
+  }
+  
+  body {
+      margin-bottom:10px;
+      background-color: rgb(141, 143, 137)
+  }
+  
+  .new{
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  }
+  .new :hover{
+    color: rgb(0, 0, 0);
+  }
+  .topnav {
+    margin-top:110px;
+    height: justify;
+  overflow: hidden;
+  float:center;
+  background-color: rgb(0, 0, 0)
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
+  color: rgb(255, 255, 255);
+  float: left;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  }
+  /* Change color on hover */
+  .topnav a:hover {
+  color: rgb(25, 187, 120);
+  }
+  body{
+    margin:0;
+    background-color: grey;
+}
+img { 
+    display: inline-block;
+  } 
+ header{
+     background: White;
+     color: black;
+     
+}
+
+
+ .navbar {
+  overflow: hidden;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  }
+  
+  .navbar a {
+  float: left;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 10px;
+  }
+  
+  .navbar a:hover {
+  background: #ffffff;
+  }
+  
+  body {
+      margin-bottom:10px;
+      background-color: rgb(141, 143, 137)
+  }
+  
+  .topnav{
+    margin-top:130px;
+    height: justify;
+  overflow: hidden;
+  float:center;
+  background-color: rgb(0, 0, 0)
+  }
+  
+ 
+  .topnav a {
+  color: rgb(255, 255, 255);
+  float: left;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  }
+  .topnav a:hover {
+  color: rgb(25, 187, 120);
+  }
+
+
+.section{
+    clear: both;
+    border-radius: 5px;
+    color:white;
+    font-size: large;
+    padding: 50px ;
+    float: left;
+    margin: 50px;
+    width: 50%;
+}
+footer{
+  position:fixed;
+  bottom: 0;
+  width: 100%;        
+  background: #333;
+  color: #fff;
+}
+.topnav{
+  margin-top: 72px;
+  height: justify;
+  overflow: hidden;
+  float:center;
+  background-color: #000000;
+  
+  }
+  
+  .navbar {
+  border-radius: 0px 0px 8px 8px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+    
+  .topnav a {
+    float: right;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 14px;
+    text-decoration: none;
+    font-size: 18px;
+   
+  }
+  
+  .topnav a:hover {
+    background:  rgb(0, 0, 0);
+    color: rgb(122, 204, 56);
+  }
+ 
+  .tp{
+    margin-top: 80px;
+    margin-left: 80px;
+  
+  }
+  /* Style the topnav links */
+  .topnav a {
+  color: rgb(255, 255, 255);
+  float: left;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  }
+  /* Change color on hover */
+  .topnav a:hover {
+  color: rgb(25, 187, 120);
+  }
+  body{
+    margin:0;
+    background-color: grey;
+}
+
+ header{
+     background: White;
+     color: black;
+     
+}
+
+  
+  body {
+      margin-bottom:10px;
+      background-color: rgb(141, 143, 137)
+  }
+  button{
+    padding:10px 10px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 15px;
+    border-radius: 8px;
+    margin-left: 1000px;
+    
+
+  }
+  .btn :hover{
+    background-color: #3e8e41;
+    
+  }
+  .btn :active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  table,th,td{
+    border:2px solid black;
+  }
+  th,td {
+    padding:500px;
+  }
+  th{
+    height: 50px;
+  }
+ 
