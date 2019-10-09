@@ -13,6 +13,6 @@ export class AdminleavehistoryService {
     return this.httpClient.get<employee[]>(url);
   } */
   getLeaveHis() :Observable<leavehistory[]>{
-    return this.httpClient.get<leavehistory[]>("assets/leavehistory.json");
+    return this.httpClient.get<leavehistory[]>("assets/adminleavehistory.json");
   }
 }

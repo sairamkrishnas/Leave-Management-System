@@ -12,6 +12,6 @@ export class ManagerDashBoardService {
    }
    getLeave() :Observable<Leave[]>{
     
-    return this.httpClient.get<Leave[]>("assets/LeaveHistory.json");
+    return this.httpClient.get<Leave[]>("assets/leavehistory.json");
   }
 }

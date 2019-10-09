@@ -3,36 +3,22 @@
   
  <app-header></app-header>
  <div style="background:#48465c;color:white">
- <nav class="navbar navbar-inverse"style="margin-top:72px;">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-       
-
+  
+<div class="topnav">
+    <div class="w3-left">
+      <a routerLink="/leave-page" routerLinkActive="active">LeavePage</a>
+      <a routerLink="/manager-dash-board" routerLinkActive="active"><span class="fa fa-home"></span> Home</a>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a  routerLink="/leave-page" routerLinkActive="active">LeavePage</a></li>
-       
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
-      </ul>
+    <div class="w3-right">
+      <a routerLink="/home" routerLinkActive="active"><span class="fa fa-sign-out"></span> Logout</a>
     </div>
   </div>
-</nav>
-  
 
 <div>
-  <div class="w3-left">
+  <div class="w3-left" style="margin-left: 60px;">
       <div class="card">
           <div class="card-body">      
-             <img src="assets/imagee.png" alt="Avatar" style="width:100px;height:100px;">   
+             <img src="assets/manager1.jpg" alt="manager" style="width:150px;height:170px;">   
           </div>
           <div class="w3-right">
             <h4><b>Name:</b>Vikneswaran</h4>
