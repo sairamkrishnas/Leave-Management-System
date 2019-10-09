@@ -1,10 +1,4 @@
-footer{
-  position:fixed;
-  bottom: 0;
-  width: 100%;        
-  background: #333;
-  color: #fff;
-}
+
 .topnav{
   margin-top: 72px;
   height: justify;
@@ -64,11 +58,7 @@ footer{
     background-color: grey;
 }
 
- header{
-     background: White;
-     color: black;
-     
-}
+
 
   
   body {

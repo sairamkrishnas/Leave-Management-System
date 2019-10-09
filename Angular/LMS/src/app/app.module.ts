@@ -25,7 +25,6 @@ import { ManagerDashBoardComponent } from './manager-dash-board/manager-dash-boa
 import { LeavePageComponent } from './leave-page/leave-page.component';
 import {RouterModule} from '@angular/router';
 import {FormsModule} from '@angular/forms';
-import {LoginComponent} from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms'; 
 import {LeavepageService} from './leave-page/leavepage.service';
 
@@ -37,8 +36,20 @@ import {LeavepageService} from './leave-page/leavepage.service';
     EmployeeDashboardComponent,
     ManagerDetailsComponent,
     ApplyLeaveComponent,
+    AdmindashboardComponent,
     EmployeeLeaveHistoryComponent,
-    NavigationComponent
+    NavigationComponent,
+    AdminholidayaddComponent,
+    AdminholidayviewComponent,
+    AdminleavehistoryComponent,
+    AdminleavehistoryPipe,
+    NavbarComponent,
+    AdminholidayhistoryPipe,
+    HomeComponent,
+    HeaderComponent,
+    LeavePageComponent,
+    FooterComponent,
+    
   ],
   imports: [
     RouterModule.forRoot([
@@ -50,36 +61,13 @@ import {LeavepageService} from './leave-page/leavepage.service';
       {path:'', component: HomeComponent},
       {path:'*', component: ErrorHandler},
       {path: 'adminleavehistory', component: AdminleavehistoryComponent },
-      { path: 'login',      component: LoginComponent },
       { path: 'home',      component: HomeComponent },
       { path: 'adminholidayadd',      component: AdminholidayaddComponent },
       { path: 'admindashboard',      component: AdmindashboardComponent },
-      { path:'',component:LoginComponent},
        { path: 'leave-page', component:LeavePageComponent  },
-       {path:'login',  component:LoginComponent},
        {path:'manager-dash-board',  component:ManagerDashBoardComponent},
       { path: 'adminholidayview', component: AdminholidayviewComponent }],),
-    
-    BrowserModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
     MatDialogModule,
-    FormsModule,
-    LoginComponent,
-    AdmindashboardComponent,
-    AdminholidayaddComponent,
-    AdminholidayviewComponent,
-    AdminleavehistoryComponent,
-    AdminleavehistoryPipe,
-    NavbarComponent,
-    AdminholidayhistoryPipe,
-    HomeComponent,
-    HeaderComponent,
-    FooterComponent,
-    LoginComponent,
-    HeaderComponent,
-    LeavePageComponent,
-    FooterComponent,
     BrowserModule,
     HttpClientModule ,
     FormsModule,
@@ -90,6 +78,5 @@ import {LeavepageService} from './leave-page/leavepage.service';
 
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents:[AdminholidayaddComponent]
 })
 export class AppModule { }
