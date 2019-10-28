@@ -7,22 +7,21 @@ import { Observable } from 'rxjs';
 })
 export class AdminholidayaddService {
   constructor(private http:HttpClient) { }
- 
-  inserData(value):Observable<Student>{
-    let userName = value.userName;
-    let email = value.email;
-    let phone = value.phone;
-    let topic= value.topic;
-    let tf = value.tf;
+ hol : Holidays[];
+  addHoliday(value){
+
+    this.hol.Holiday_Name = value.Name;
+    this.hol.Holiday_Type = value.Ltype;
+    this.hol.Holiday_Date = value.date;
+    this.hol.Holiday_Day = value.Day;
   console.log("From Service layer");
-  console.log("userName"+userName);
-  console.log("email"+email);
-  console.log("phone"+phone);
-  console.log("topic"+topic);
-  console.log("tf"+tf);
+  console.log("userName"+this.hol.Holiday_Name);
+  console.log("email"+this.hol.Holiday_Type);
+  console.log("phone"+this.hol.Holiday_Date);
+  console.log("topic"+this.hol.Holiday_Day);
     
-     return this.http.post<Student>("http://localhost:8080/ftp11-0.0.1-SNAPSHOT/api/xxx/xxx/"+userName+"/"+email+"/"+phone+"/"+topic+"/"+tf,{"userName":userName,"email":email,"phone":phone,"topic":topic,"tf":tf});
-         
+     //return this.http.post("http://localhost:14883/LeaveManagementSystem/api/training/");
+       return ;  
  
   }
 }

@@ -4,17 +4,20 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DAO {
+	
 	Connection conn = null;
-	public Connection getConnection() {
+	public Connection getConnection() throws ClassNotFoundException {
 		
-		String dbURL = "jdbc:mysql://localhost:3306/sampledb?useSSL=false";
+		String dbURL = "jdbc:mysql://localhost:3306/lms?useSSL=false";
 		String username = "root";
 		String password = "Hexaware123";
 	
 		try {
-	     conn = DriverManager.getConnection(dbURL, username, password);
-		} catch (SQLException ex) {
-	ex.printStackTrace();
+			Class.forName("com.mysql.jdbc.Driver");
+			conn = DriverManager.getConnection(dbURL, username, password);
+		} 
+		catch (SQLException ex) {
+			ex.printStackTrace();
 		}
 		return conn;
 	}

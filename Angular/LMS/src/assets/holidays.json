@@ -1,28 +1,163 @@
-[{"date":"01-01-2019","day":"Wednesday","holiday":"New year"},
-    {"date":"01-21-2019","day":"Monday","holiday":"Birthday of Martin Luther KIng, Jr."},
-    {"date":"02-18-2019","day":"Monday","holiday":"Washington's Birthday"},
-    {"date":"05-04-2019","day":"Saturday","holiday":"Birthday of Sai Ram"},
-    {"date":"05-27-2019","day":"Monday","holiday":"Memorial Day"},
-    {"date":"07-04-2019","day":"Thursday","holiday":"Independence Day"},
-    {"date":"09-02-2019","day":"Monday","holiday":"Labor Day"},
-    {"date":"10-14-2019","day":"Monday","holiday":"Columbus Day"},
-    {"date":"11-28-2019","day":"Thursday","holiday":"Thanksgiving Day"},
-    {"date":"012-25-2019","day":"Wednesday","holiday":"Christmas Day"},{"date":"01-01-2019","day":"Wednesday","holiday":"New year"},
-    {"date":"01-21-2019","day":"Monday","holiday":"Birthday of Martin Luther KIng, Jr."},
-    {"date":"02-18-2019","day":"Monday","holiday":"Washington's Birthday"},
-    {"date":"05-04-2019","day":"Saturday","holiday":"Birthday of Sai Ram"},
-    {"date":"05-27-2019","day":"Monday","holiday":"Memorial Day"},
-    {"date":"07-04-2019","day":"Thursday","holiday":"Independence Day"},
-    {"date":"09-02-2019","day":"Monday","holiday":"Labor Day"},
-    {"date":"10-14-2019","day":"Monday","holiday":"Columbus Day"},
-    {"date":"11-28-2019","day":"Thursday","holiday":"Thanksgiving Day"},
-    {"date":"012-25-2019","day":"Wednesday","holiday":"Christmas Day"},{"date":"01-01-2019","day":"Wednesday","holiday":"New year"},
-    {"date":"01-21-2019","day":"Monday","holiday":"Birthday of Martin Luther KIng, Jr."},
-    {"date":"02-18-2019","day":"Monday","holiday":"Washington's Birthday"},
-    {"date":"05-04-2019","day":"Saturday","holiday":"Birthday of Sai Ram"},
-    {"date":"05-27-2019","day":"Monday","holiday":"Memorial Day"},
-    {"date":"07-04-2019","day":"Thursday","holiday":"Independence Day"},
-    {"date":"09-02-2019","day":"Monday","holiday":"Labor Day"},
-    {"date":"10-14-2019","day":"Monday","holiday":"Columbus Day"},
-    {"date":"11-28-2019","day":"Thursday","holiday":"Thanksgiving Day"},
-    {"date":"012-25-2019","day":"Wednesday","holiday":"Christmas Day"}]
+[
+    {
+        "holiday_Type": "Federal",
+        "holiday_Name": "New Year's Day",
+        "holiday_Id": 1,
+        "holiday_Day": "Tuesday",
+        "holiday_Date": "2019-01-01"
+    },
+    {
+        "holiday_Type": "Federal",
+        "holiday_Name": "Birthday of Martin Luther King Jr.",
+        "holiday_Id": 2,
+        "holiday_Day": "Monday",
+        "holiday_Date": "2019-01-21"
+    },
+    {
+        "holiday_Type": "Federal",
+        "holiday_Name": "Washington's Birthday",
+        "holiday_Id": 3,
+        "holiday_Day": "Monday",
+        "holiday_Date": "2019-02-18"
+    },
+    {
+        "holiday_Type": "Federal",
+        "holiday_Name": "Memorial Day",
+        "holiday_Id": 4,
+        "holiday_Day": "Monday",
+        "holiday_Date": "2019-05-27"
+    },
+    {
+        "holiday_Type": "Federal",
+        "holiday_Name": "Independence Day",
+        "holiday_Id": 5,
+        "holiday_Day": "Thursday",
+        "holiday_Date": "2019-07-04"
+    },
+    {
+        "holiday_Type": "Federal",
+        "holiday_Name": "Labor Day",
+        "holiday_Id": 6,
+        "holiday_Day": "Monday",
+        "holiday_Date": "2019-09-02"
+    },
+    {
+        "holiday_Type": "Federal",
+        "holiday_Name": "Columbus Day",
+        "holiday_Id": 7,
+        "holiday_Day": "Monday",
+        "holiday_Date": "2019-10-14"
+    },
+    {
+        "holiday_Type": "Federal",
+        "holiday_Name": "Veterans Day",
+        "holiday_Id": 8,
+        "holiday_Day": "Monday",
+        "holiday_Date": "2019-11-11"
+    },
+    {
+        "holiday_Type": "Federal",
+        "holiday_Name": "Thanksgiving Day",
+        "holiday_Id": 9,
+        "holiday_Day": "Thursday",
+        "holiday_Date": "2019-11-28"
+    },
+    {
+        "holiday_Type": "Federal",
+        "holiday_Name": "Christmas Day",
+        "holiday_Id": 10,
+        "holiday_Day": "Wednesday",
+        "holiday_Date": "2019-12-25"
+    },
+    {
+        "holiday_Type": "Federal",
+        "holiday_Name": "New Year's Day",
+        "holiday_Id": 11,
+        "holiday_Day": "Wednesday",
+        "holiday_Date": "2020-01-01"
+    },
+    {
+        "holiday_Type": "Federal",
+        "holiday_Name": "Birthday of Martin Luther King Jr.",
+        "holiday_Id": 12,
+        "holiday_Day": "Monday",
+        "holiday_Date": "2020-01-20"
+    },
+    {
+        "holiday_Type": "Federal",
+        "holiday_Name": "Washington's Birthday",
+        "holiday_Id": 13,
+        "holiday_Day": "Monday",
+        "holiday_Date": "2020-02-17"
+    },
+    {
+        "holiday_Type": "Federal",
+        "holiday_Name": "Memorial Day",
+        "holiday_Id": 14,
+        "holiday_Day": "Monday",
+        "holiday_Date": "2020-05-25"
+    },
+    {
+        "holiday_Type": "Federal",
+        "holiday_Name": "Independence Day",
+        "holiday_Id": 15,
+        "holiday_Day": "Friday",
+        "holiday_Date": "2020-07-03"
+    },
+    {
+        "holiday_Type": "Federal",
+        "holiday_Name": "Labor Day",
+        "holiday_Id": 16,
+        "holiday_Day": "Monday",
+        "holiday_Date": "2020-09-07"
+    },
+    {
+        "holiday_Type": "Federal",
+        "holiday_Name": "Columbus Day",
+        "holiday_Id": 17,
+        "holiday_Day": "Monday",
+        "holiday_Date": "2020-10-12"
+    },
+    {
+        "holiday_Type": "Federal",
+        "holiday_Name": "Veterans Day",
+        "holiday_Id": 18,
+        "holiday_Day": "Wednesday",
+        "holiday_Date": "2020-11-11"
+    },
+    {
+        "holiday_Type": "Federal",
+        "holiday_Name": "Thanksgiving Day",
+        "holiday_Id": 19,
+        "holiday_Day": "Thursday",
+        "holiday_Date": "2020-11-26"
+    },
+    {
+        "holiday_Type": "Federal",
+        "holiday_Name": "Christmas Day",
+        "holiday_Id": 20,
+        "holiday_Day": "Friday",
+        "holiday_Date": "2020-12-25"
+    },
+    {
+        "holiday_Type": "Optional",
+        "holiday_Name": "Sankranthi",
+        "holiday_Id": 21,
+        "holiday_Day": "Monday",
+        "holiday_Date": "2019-01-26"
+    },
+    {
+        "holiday_Type": "Optional",
+        "holiday_Name": "Sankranthi",
+        "holiday_Id": 22,
+        "holiday_Day": "Monday",
+        "holiday_Date": "2019-01-26"
+    },
+    {
+        "holiday_Type": "Optional",
+        "holiday_Name": "Diwali",
+        "holiday_Id": 23,
+        "holiday_Day": "Friday",
+        "holiday_Date": "2019-10-18"
+    }
+]

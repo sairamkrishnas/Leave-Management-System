@@ -1,5 +1,7 @@
 interface holidays{
-    date:any;
-    day:any;
-    holiday:any;
+    holiday_Type:any;
+    holiday_Name: any;
+    holiday_Id: any;
+    holiday_Day: any;
+    holiday_Date: any;
 }
