@@ -21,11 +21,17 @@ ngOnInit(): void {
     throw new Error("Method not implemented.");
   }
   model: any = {};
-  constructor(private router: Router){
+  hol : Holidays[];
+  constructor(private router: Router,private adminholidayaddService :AdminholidayaddService){
 
   }
   onSubmit() {
-    alert('SUCCESS:-)\n\n' + JSON.stringify(this.model))
-    this.router.navigate(["admindashboard"]);
-  } 
+    this.hol.Holiday_Name = this.model.Name;
+    this.hol.Holiday_Type = this.model.Ltype;
+    this.hol.Holiday_Date = this.model.date;
+    this.hol.Holiday_Day = this.model.Day;
+    alert('SUCCESS:-)\n\n');
+    this.adminholidayaddService.addHoliday(this.hol);
+    //this.router.navigate(["admindashboard"]);
+  }
 }

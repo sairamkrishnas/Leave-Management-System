@@ -54,21 +54,24 @@
                         </div> -->
              <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
                     <div class="form-group">
-                            <label for="Ltype">Holiday Name:</label>
-                            <select class="form-control" name="Ltype" [(ngModel)]="model.Ltype" #Ltype="ngModel" [ngClass]="{ 'is-invalid': f.submitted && Ltype.invalid }" required >
-                                <option value="none" selected disabled hidden> Select an Option </option>
-                                <option value="Martin Luther">Birthday of Martin Luther King Jr</option>
-                                <option value="Washington">Washington's Birthday</option>
-                                <option value="Memorial">Memorial Day</option>
-                                <option value="Labor">Labor Day</option>
-                                <option value="Columbus">Columbus Day</option>
-                                <option value="Thanksgiving">Thanksgiving Day</option>
-                                <option value="Others">Others</option>
-                            </select>
-                            <div *ngIf="f.submitted && Ltype.invalid" class="invalid-feedback">
-                                <div *ngIf="Ltype.errors.required">**You have to select leave type</div>
+                            <label for="Name">Holiday Name:</label>
+                            <input type="text" class="form-control" name="Name" [(ngModel)]="model.Name" #Ltype="ngModel" [ngClass]="{ 'is-invalid': f.submitted && Name.invalid }" required />
+                            <div *ngIf="f.submitted && Name.invalid" class="invalid-feedback">
+                                <div *ngIf="Name.errors.required">**You have to enter name</div>
                             </div>
                         </div>       
+
+                        <div class="form-group">
+                          <label for="Ltype">Holiday Type:</label>
+                          <select class="form-control" name="Ltype" [(ngModel)]="model.Ltype" #Ltype="ngModel" [ngClass]="{ 'is-invalid': f.submitted && Ltype.invalid }" required >
+                              <option value="none" selected disabled hidden> Select an Option </option>
+                              <option value="Federal Holiday">Federal Holiday</option>
+                              <option value="Optional Holiday">Optional Holiday</option>
+                          </select>
+                          <div *ngIf="f.submitted && Ltype.invalid" class="invalid-feedback">
+                              <div *ngIf="Ltype.errors.required">**You have to select leave type</div>
+                          </div>
+                      </div>       
                 <div class="form-group">
                             <label for="date">Select Date:</label>
                             <input type="date" class="form-control fa fa-calendar" name="date" [(ngModel)]="model.date" #date="ngModel" [ngClass]="{ 'is-invalid': f.submitted && date.invalid }" required />
@@ -78,14 +81,14 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="reason">Reason:</label>
-                            <textarea type="text" class="form-control" name="reason" [(ngModel)]="model.reason" #reason="ngModel" 
-                            placeholder="Please write reason.." style="height:100px" [ngClass]="{ 'is-invalid': f.submitted && reason.invalid }" required>
-                            </textarea>
-                                <div *ngIf="f.submitted && reason.invalid" class="invalid-feedback">
-                                <div *ngIf="reason.errors.required">** Reason is required.</div>
-                            </div>
-                        </div>
+                          <label for="Day">Holiday Day:</label>
+                          <input type="text" class="form-control" name="Day" [(ngModel)]="model.Day" #Ltype="ngModel" [ngClass]="{ 'is-invalid': f.submitted && Day.invalid }" required />
+                          
+                          <div *ngIf="f.submitted && Day.invalid" class="invalid-feedback">
+                              <div *ngIf="Day.errors.required">**You have to enter day</div>
+                          </div>
+                      </div>    
+              
                         <div class="form-group">
                             <button type="submit" style="margin: 20px;" class="btn btn-success">Add</button>
                             <button type="reset" style="margin: 20px;" class="btn btn-danger">Cancel</button>

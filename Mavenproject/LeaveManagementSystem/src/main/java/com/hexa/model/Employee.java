@@ -4,133 +4,89 @@ public class Employee {
 
 	private String Employee_LastName, Employee_FirstName, Employee_Address, Employee_Role;
 	private String Employee_User_Name, Employee_Password, Employee_Joining, Employee_Email;
-	private int Manager_Id, Employee_Id ;
+	private int Manager_Id, Employee_Id,No_of_Leaves_Applied ;
 	private long Employee_Phone ;
-	
-	
 	public String getEmployee_LastName() {
 		return Employee_LastName;
 	}
 	public void setEmployee_LastName(String employee_LastName) {
 		Employee_LastName = employee_LastName;
 	}
-	
-	
 	public String getEmployee_FirstName() {
 		return Employee_FirstName;
 	}
 	public void setEmployee_FirstName(String employee_FirstName) {
 		Employee_FirstName = employee_FirstName;
 	}
-	
-	
 	public String getEmployee_Address() {
 		return Employee_Address;
 	}
 	public void setEmployee_Address(String employee_Address) {
 		Employee_Address = employee_Address;
 	}
-	
-	
 	public String getEmployee_Role() {
 		return Employee_Role;
 	}
 	public void setEmployee_Role(String employee_Role) {
 		Employee_Role = employee_Role;
 	}
-	
-	
 	public String getEmployee_User_Name() {
 		return Employee_User_Name;
 	}
 	public void setEmployee_User_Name(String employee_User_Name) {
 		Employee_User_Name = employee_User_Name;
 	}
-	
-	
 	public String getEmployee_Password() {
 		return Employee_Password;
 	}
 	public void setEmployee_Password(String employee_Password) {
 		Employee_Password = employee_Password;
 	}
-	
-	
 	public String getEmployee_Joining() {
 		return Employee_Joining;
 	}
 	public void setEmployee_Joining(String employee_Joining) {
 		Employee_Joining = employee_Joining;
 	}
-	
-	
 	public String getEmployee_Email() {
 		return Employee_Email;
 	}
 	public void setEmployee_Email(String employee_Email) {
 		Employee_Email = employee_Email;
 	}
-	
-	
 	public int getManager_Id() {
 		return Manager_Id;
 	}
 	public void setManager_Id(int manager_Id) {
 		Manager_Id = manager_Id;
 	}
-	
-	
 	public int getEmployee_Id() {
 		return Employee_Id;
 	}
 	public void setEmployee_Id(int employee_Id) {
 		Employee_Id = employee_Id;
 	}
-	
-	
+	public int getNo_of_Leaves_Applied() {
+		return No_of_Leaves_Applied;
+	}
+	public void setNo_of_Leaves_Applied(int no_of_Leaves_Applied) {
+		No_of_Leaves_Applied = no_of_Leaves_Applied;
+	}
 	public long getEmployee_Phone() {
 		return Employee_Phone;
 	}
 	public void setEmployee_Phone(long employee_Phone) {
 		Employee_Phone = employee_Phone;
 	}
-	
-	
-	
-	public Employee() {
-		
-	}
-	public Employee(String employee_LastName, String employee_FirstName, String employee_Address, String employee_Role,
-			String employee_User_Name, String employee_Password, String employee_Joining, String employee_Email,
-			int manager_Id, int employee_Id, long employee_Phone) {
-		super();
-		Employee_LastName = employee_LastName;
-		Employee_FirstName = employee_FirstName;
-		Employee_Address = employee_Address;
-		Employee_Role = employee_Role;
-		Employee_User_Name = employee_User_Name;
-		Employee_Password = employee_Password;
-		Employee_Joining = employee_Joining;
-		Employee_Email = employee_Email;
-		Manager_Id = manager_Id;
-		Employee_Id = employee_Id;
-		Employee_Phone = employee_Phone;
-	}
-	
-	
-	
 	@Override
 	public String toString() {
 		return "Employee [Employee_LastName=" + Employee_LastName + ", Employee_FirstName=" + Employee_FirstName
 				+ ", Employee_Address=" + Employee_Address + ", Employee_Role=" + Employee_Role
 				+ ", Employee_User_Name=" + Employee_User_Name + ", Employee_Password=" + Employee_Password
 				+ ", Employee_Joining=" + Employee_Joining + ", Employee_Email=" + Employee_Email + ", Manager_Id="
-				+ Manager_Id + ", Employee_Id=" + Employee_Id + ", Employee_Phone=" + Employee_Phone + "]";
+				+ Manager_Id + ", Employee_Id=" + Employee_Id + ", No_of_Leaves_Applied=" + No_of_Leaves_Applied
+				+ ", Employee_Phone=" + Employee_Phone + "]";
 	}
-	
-	
-	
-	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -146,12 +102,9 @@ public class Employee {
 		result = prime * result + ((Employee_Role == null) ? 0 : Employee_Role.hashCode());
 		result = prime * result + ((Employee_User_Name == null) ? 0 : Employee_User_Name.hashCode());
 		result = prime * result + Manager_Id;
+		result = prime * result + No_of_Leaves_Applied;
 		return result;
 	}
-	
-	
-	
-	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -207,6 +160,31 @@ public class Employee {
 			return false;
 		if (Manager_Id != other.Manager_Id)
 			return false;
+		if (No_of_Leaves_Applied != other.No_of_Leaves_Applied)
+			return false;
 		return true;
 	}
+	public Employee(String employee_LastName, String employee_FirstName, String employee_Address, String employee_Role,
+			String employee_User_Name, String employee_Password, String employee_Joining, String employee_Email,
+			int manager_Id, int employee_Id, int no_of_Leaves_Applied, long employee_Phone) {
+		super();
+		Employee_LastName = employee_LastName;
+		Employee_FirstName = employee_FirstName;
+		Employee_Address = employee_Address;
+		Employee_Role = employee_Role;
+		Employee_User_Name = employee_User_Name;
+		Employee_Password = employee_Password;
+		Employee_Joining = employee_Joining;
+		Employee_Email = employee_Email;
+		Manager_Id = manager_Id;
+		Employee_Id = employee_Id;
+		No_of_Leaves_Applied = no_of_Leaves_Applied;
+		Employee_Phone = employee_Phone;
+	}
+	public Employee() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
 }

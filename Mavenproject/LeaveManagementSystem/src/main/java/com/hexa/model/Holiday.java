@@ -5,7 +5,6 @@ public class Holiday {
 	private int Holiday_Id;
 	private String Holiday_Name, Holiday_Type, Holiday_Date, Holiday_Day;
 	
-	
 	public int getHoliday_Id() {
 		return Holiday_Id;
 	}
@@ -49,9 +48,8 @@ public class Holiday {
 	public Holiday() {
 		
 	}
-	public Holiday(int holiday_Id, String holiday_Name, String holiday_Type, String holiday_Date, String holiday_Day) {
+	public Holiday(String holiday_Name, String holiday_Type, String holiday_Date, String holiday_Day) {
 		super();
-		Holiday_Id = holiday_Id;
 		Holiday_Name = holiday_Name;
 		Holiday_Type = holiday_Type;
 		Holiday_Date = holiday_Date;

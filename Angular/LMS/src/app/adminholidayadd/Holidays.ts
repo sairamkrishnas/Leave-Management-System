@@ -1,6 +1,6 @@
-export class Holidays {
-    constructor(
-      public date: any,
-      public name: any,
-    ) {  }
+interface Holidays {
+       Holiday_Name: any,
+       Holiday_Type: any,
+       Holiday_Date: any,
+       Holiday_Day: any,
   }
