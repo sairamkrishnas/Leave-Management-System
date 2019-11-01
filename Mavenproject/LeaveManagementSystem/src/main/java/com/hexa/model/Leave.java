@@ -2,109 +2,63 @@ package com.hexa.model;
 
 public class Leave {
 
-	private int Employee_Id, Leave_Id; 
-	private String Leave_Type, Leave_Reason, From_Date, To_Date, Leave_Status;
-	
-	
+	private int employee_Id, leave_Id; 
+	private String leave_Type, leave_Reason, from_Date, to_Date, leave_Status;
 	public int getEmployee_Id() {
-		return Employee_Id;
+		return employee_Id;
 	}
 	public void setEmployee_Id(int employee_Id) {
-		Employee_Id = employee_Id;
+		this.employee_Id = employee_Id;
 	}
-	
-	
 	public int getLeave_Id() {
-		return Leave_Id;
+		return leave_Id;
 	}
 	public void setLeave_Id(int leave_Id) {
-		Leave_Id = leave_Id;
+		this.leave_Id = leave_Id;
 	}
-	
-	
 	public String getLeave_Type() {
-		return Leave_Type;
+		return leave_Type;
 	}
 	public void setLeave_Type(String leave_Type) {
-		Leave_Type = leave_Type;
+		this.leave_Type = leave_Type;
 	}
-	
-	
 	public String getLeave_Reason() {
-		return Leave_Reason;
+		return leave_Reason;
 	}
 	public void setLeave_Reason(String leave_Reason) {
-		Leave_Reason = leave_Reason;
+		this.leave_Reason = leave_Reason;
 	}
-	
-	
 	public String getFrom_Date() {
-		return From_Date;
+		return from_Date;
 	}
 	public void setFrom_Date(String from_Date) {
-		From_Date = from_Date;
+		this.from_Date = from_Date;
 	}
-	
-	
 	public String getTo_Date() {
-		return To_Date;
+		return to_Date;
 	}
 	public void setTo_Date(String to_Date) {
-		To_Date = to_Date;
+		this.to_Date = to_Date;
 	}
-	
-	
 	public String getLeave_Status() {
-		return Leave_Status;
+		return leave_Status;
 	}
 	public void setLeave_Status(String leave_Status) {
-		Leave_Status = leave_Status;
+		this.leave_Status = leave_Status;
 	}
-	
-	
-	
-	public Leave() {
-		
-	}
-	public Leave(int employee_Id, int leave_Id, String leave_Type, String leave_Reason, String from_Date,
-			String to_Date, String leave_Status) {
-		super();
-		Employee_Id = employee_Id;
-		Leave_Id = leave_Id;
-		Leave_Type = leave_Type;
-		Leave_Reason = leave_Reason;
-		From_Date = from_Date;
-		To_Date = to_Date;
-		Leave_Status = leave_Status;
-	}
-	
-	
-	
-	@Override
-	public String toString() {
-		return "Leave [Employee_Id=" + Employee_Id + ", Leave_Id=" + Leave_Id + ", Leave_Type=" + Leave_Type
-				+ ", Leave_Reason=" + Leave_Reason + ", From_Date=" + From_Date + ", To_Date=" + To_Date
-				+ ", Leave_Status=" + Leave_Status + "]";
-	}
-	
-	
-	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + Employee_Id;
-		result = prime * result + ((From_Date == null) ? 0 : From_Date.hashCode());
-		result = prime * result + Leave_Id;
-		result = prime * result + ((Leave_Reason == null) ? 0 : Leave_Reason.hashCode());
-		result = prime * result + ((Leave_Status == null) ? 0 : Leave_Status.hashCode());
-		result = prime * result + ((Leave_Type == null) ? 0 : Leave_Type.hashCode());
-		result = prime * result + ((To_Date == null) ? 0 : To_Date.hashCode());
+		result = prime * result + employee_Id;
+		result = prime * result + ((from_Date == null) ? 0 : from_Date.hashCode());
+		result = prime * result + leave_Id;
+		result = prime * result + ((leave_Reason == null) ? 0 : leave_Reason.hashCode());
+		result = prime * result + ((leave_Status == null) ? 0 : leave_Status.hashCode());
+		result = prime * result + ((leave_Type == null) ? 0 : leave_Type.hashCode());
+		result = prime * result + ((to_Date == null) ? 0 : to_Date.hashCode());
 		return result;
 	}
-	
-	
-	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -114,35 +68,66 @@ public class Leave {
 		if (getClass() != obj.getClass())
 			return false;
 		Leave other = (Leave) obj;
-		if (Employee_Id != other.Employee_Id)
+		if (employee_Id != other.employee_Id)
 			return false;
-		if (From_Date == null) {
-			if (other.From_Date != null)
+		if (from_Date == null) {
+			if (other.from_Date != null)
 				return false;
-		} else if (!From_Date.equals(other.From_Date))
+		} else if (!from_Date.equals(other.from_Date))
 			return false;
-		if (Leave_Id != other.Leave_Id)
+		if (leave_Id != other.leave_Id)
 			return false;
-		if (Leave_Reason == null) {
-			if (other.Leave_Reason != null)
+		if (leave_Reason == null) {
+			if (other.leave_Reason != null)
 				return false;
-		} else if (!Leave_Reason.equals(other.Leave_Reason))
+		} else if (!leave_Reason.equals(other.leave_Reason))
 			return false;
-		if (Leave_Status == null) {
-			if (other.Leave_Status != null)
+		if (leave_Status == null) {
+			if (other.leave_Status != null)
 				return false;
-		} else if (!Leave_Status.equals(other.Leave_Status))
+		} else if (!leave_Status.equals(other.leave_Status))
 			return false;
-		if (Leave_Type == null) {
-			if (other.Leave_Type != null)
+		if (leave_Type == null) {
+			if (other.leave_Type != null)
 				return false;
-		} else if (!Leave_Type.equals(other.Leave_Type))
+		} else if (!leave_Type.equals(other.leave_Type))
 			return false;
-		if (To_Date == null) {
-			if (other.To_Date != null)
+		if (to_Date == null) {
+			if (other.to_Date != null)
 				return false;
-		} else if (!To_Date.equals(other.To_Date))
+		} else if (!to_Date.equals(other.to_Date))
 			return false;
 		return true;
+	}
+	@Override
+	public String toString() {
+		return "Leave [employee_Id=" + employee_Id + ", leave_Id=" + leave_Id + ", leave_Type=" + leave_Type
+				+ ", leave_Reason=" + leave_Reason + ", from_Date=" + from_Date + ", to_Date=" + to_Date
+				+ ", leave_Status=" + leave_Status + "]";
+	}
+	public Leave(int employee_Id, int leave_Id, String leave_Type, String leave_Reason, String from_Date,
+			String to_Date, String leave_Status) {
+		super();
+		this.employee_Id = employee_Id;
+		this.leave_Id = leave_Id;
+		this.leave_Type = leave_Type;
+		this.leave_Reason = leave_Reason;
+		this.from_Date = from_Date;
+		this.to_Date = to_Date;
+		this.leave_Status = leave_Status;
+	}
+	public Leave() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Leave(Leave l) {
+		setEmployee_Id(l.employee_Id);
+		setLeave_Type(l.leave_Type);
+		setLeave_Reason(l.leave_Reason);
+		setFrom_Date(l.from_Date);
+		setTo_Date(l.to_Date);
+		setLeave_Id(l.leave_Id);
+		setLeave_Status(l.leave_Status);
 	}
 }

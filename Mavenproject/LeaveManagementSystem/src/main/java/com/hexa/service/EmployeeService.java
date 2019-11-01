@@ -3,6 +3,7 @@ package com.hexa.service;
 import java.sql.Date;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 import com.hexa.connection.DbConnection;
@@ -10,7 +11,7 @@ import com.hexa.model.Employee;
 
 public class EmployeeService {
 	Employee e = new Employee();
-	
+	ArrayList<Employee> employee = new ArrayList<Employee>();
 	
 	public static int getDaysBetweenTwoDates(Date startDate, Date endDate) {
 	    Calendar startCal = Calendar.getInstance();
@@ -52,28 +53,28 @@ public class EmployeeService {
 		
 		//String dateBeforeString = "2017-05-24";
 		//String dateAfterString = "2017-07-29";
-		e=db.viewemp(id);
+		employee=db.viewemp(id);
 		//Parsing the date
 		LocalDate dateBefore = LocalDate.parse(from);
 		LocalDate dateAfter = LocalDate.parse(to);
 		Date date1 = java.sql.Date.valueOf(dateBefore);
 		Date date2 = java.sql.Date.valueOf(dateAfter);
 		
-		LocalDate joiningdate = LocalDate.parse(e.getEmployee_Joining());
+		LocalDate joiningdate = LocalDate.parse(employee.get(0).getEmployee_Joining());
 		if (dateBefore.isAfter(java.time.LocalDate.now())) {
 		//calculating number of days in between
 		//long noOfDaysBetween = ChronoUnit.DAYS.between(dateBefore, java.time.LocalDate.now());
 			
 		int noOfDaysBetween = getDaysBetweenTwoDates(date1,date2);
-		int noOfDaysAfterJoining = (int)(ChronoUnit.MONTHS.between(joiningdate, java.time.LocalDate.now())*2-e.getNo_of_Leaves_Applied());
-		int noOfDaysCanApply = noOfDaysAfterJoining-e.getNo_of_Leaves_Applied();
+		int noOfDaysAfterJoining = (int)(ChronoUnit.MONTHS.between(joiningdate, java.time.LocalDate.now())*2-employee.get(0).getNo_of_Leaves_Applied());
+		int noOfDaysCanApply = noOfDaysAfterJoining-employee.get(0).getNo_of_Leaves_Applied();
 		//displaying the number of days
 		System.out.println(noOfDaysBetween);
 		//System.out.println(noOfDaysAfterJoining);
 		//System.out.println(java.time.LocalDate.now()); 
 		
 		if(noOfDaysBetween <= noOfDaysCanApply) {
-			int no = Math.abs(e.getNo_of_Leaves_Applied() - noOfDaysBetween);
+			int no = Math.abs(employee.get(0).getNo_of_Leaves_Applied() - noOfDaysBetween);
 			db.UpdateLeaveBalanceColumn(id,no);
 			String i = db.applyLeave(id, type, reason, from, to);
 			return i;
@@ -96,13 +97,13 @@ public class EmployeeService {
 		
 		return i;
 	}
-	public Employee Login(String n, String p) {
+	public ArrayList<Employee> Login(String n, String p) {
 		
 		DbConnection db = new DbConnection();
-		e = db.login(n);
+		employee = db.login(n);
 		
-		if (e.getEmployee_User_Name().equals(n)&& e.getEmployee_Password().contentEquals(p)) {
-			return e;
+		if (employee.get(0).getEmployee_User_Name().equals(n)&& employee.get(0).getEmployee_Password().equals(p)) {
+			return employee;
 		}
 		else {
 			System.out.println("Invalid Details");
@@ -117,18 +118,18 @@ public class EmployeeService {
 		return msg;
 	}
 	
-	public Employee ViewEmployeeDetails(int i) {
+	public ArrayList<Employee> ViewEmployeeDetails(int i) {
 		
 		DbConnection db = new DbConnection();
-		e = db.viewemp(i);
+		employee = db.viewemp(i);
 		
-		return e;
+		return employee;
 	}
-	public Employee ViewManagerDetails(int i) {
+	public ArrayList<Employee> ViewManagerDetails(int i) {
 		
 		DbConnection db = new DbConnection();
-		e = db.viewman(i);
+		employee = db.viewman(i);
 		
-		return e;
+		return employee;
 	}
 }

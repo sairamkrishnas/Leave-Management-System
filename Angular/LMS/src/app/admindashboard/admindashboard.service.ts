@@ -12,7 +12,7 @@ export class AdmindashboardService {
     let url = "http://dummy.restapiexample.com/api/v1/employees"
     return this.httpClient.get<employee[]>(url);
   } */
-  getAdmin() :Observable<Admin[]>{
+/*   getAdmin() :Observable<Admin[]>{
     return this.httpClient.get<Admin[]>("assets/admin.json");
-  }
+  } */
 }

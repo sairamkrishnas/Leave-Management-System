@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AdmindashboardService } from './admindashboard.service';
+import { Employee } from '../home/Employee';
+import { CommonService } from '../common.service';
 
 @Component({
   selector: 'app-admindashboard',
@@ -7,16 +9,19 @@ import { AdmindashboardService } from './admindashboard.service';
   styleUrls: ['./admindashboard.component.css']
 })
 export class AdmindashboardComponent implements OnInit {
-   admin: Admin[];
    public searchText : any;
+   emp :Employee[];
    errorMsg: any;
-   constructor(public admindashboardService : AdmindashboardService) { }
+   constructor(public admindashboardService : AdmindashboardService,public commonService : CommonService) { 
+    this.emp = this.commonService.getEmployee();
+   }
  
    ngOnInit() {
-     this.admindashboardService.getAdmin().subscribe(
+    
+     /* this.admindashboardService.getAdmin().subscribe(
        data => this.admin = data,
        error => this.errorMsg = error
-     );
+     ); */
    }
  
  }

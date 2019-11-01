@@ -3,9 +3,10 @@ package com.hexa.model;
 public class Employee {
 
 	private String Employee_LastName, Employee_FirstName, Employee_Address, Employee_Role;
-	private String Employee_User_Name, Employee_Password, Employee_Joining, Employee_Email;
+	private String Employee_User_Name, Employee_Password, Employee_Joining, Employee_Email,Image;
 	private int Manager_Id, Employee_Id,No_of_Leaves_Applied ;
 	private long Employee_Phone ;
+	
 	public String getEmployee_LastName() {
 		return Employee_LastName;
 	}
@@ -54,6 +55,12 @@ public class Employee {
 	public void setEmployee_Email(String employee_Email) {
 		Employee_Email = employee_Email;
 	}
+	public String getImage() {
+		return Image;
+	}
+	public void setImage(String image) {
+		Image = image;
+	}
 	public int getManager_Id() {
 		return Manager_Id;
 	}
@@ -83,9 +90,27 @@ public class Employee {
 		return "Employee [Employee_LastName=" + Employee_LastName + ", Employee_FirstName=" + Employee_FirstName
 				+ ", Employee_Address=" + Employee_Address + ", Employee_Role=" + Employee_Role
 				+ ", Employee_User_Name=" + Employee_User_Name + ", Employee_Password=" + Employee_Password
-				+ ", Employee_Joining=" + Employee_Joining + ", Employee_Email=" + Employee_Email + ", Manager_Id="
-				+ Manager_Id + ", Employee_Id=" + Employee_Id + ", No_of_Leaves_Applied=" + No_of_Leaves_Applied
-				+ ", Employee_Phone=" + Employee_Phone + "]";
+				+ ", Employee_Joining=" + Employee_Joining + ", Employee_Email=" + Employee_Email + ", Image=" + Image
+				+ ", Manager_Id=" + Manager_Id + ", Employee_Id=" + Employee_Id + ", No_of_Leaves_Applied="
+				+ No_of_Leaves_Applied + ", Employee_Phone=" + Employee_Phone + "]";
+	}
+	public Employee(String employee_LastName, String employee_FirstName, String employee_Address, String employee_Role,
+			String employee_User_Name, String employee_Password, String employee_Joining, String employee_Email,
+			String image, int manager_Id, int employee_Id, int no_of_Leaves_Applied, long employee_Phone) {
+		super();
+		Employee_LastName = employee_LastName;
+		Employee_FirstName = employee_FirstName;
+		Employee_Address = employee_Address;
+		Employee_Role = employee_Role;
+		Employee_User_Name = employee_User_Name;
+		Employee_Password = employee_Password;
+		Employee_Joining = employee_Joining;
+		Employee_Email = employee_Email;
+		Image = image;
+		Manager_Id = manager_Id;
+		Employee_Id = employee_Id;
+		No_of_Leaves_Applied = no_of_Leaves_Applied;
+		Employee_Phone = employee_Phone;
 	}
 	@Override
 	public int hashCode() {
@@ -101,6 +126,7 @@ public class Employee {
 		result = prime * result + (int) (Employee_Phone ^ (Employee_Phone >>> 32));
 		result = prime * result + ((Employee_Role == null) ? 0 : Employee_Role.hashCode());
 		result = prime * result + ((Employee_User_Name == null) ? 0 : Employee_User_Name.hashCode());
+		result = prime * result + ((Image == null) ? 0 : Image.hashCode());
 		result = prime * result + Manager_Id;
 		result = prime * result + No_of_Leaves_Applied;
 		return result;
@@ -158,28 +184,16 @@ public class Employee {
 				return false;
 		} else if (!Employee_User_Name.equals(other.Employee_User_Name))
 			return false;
+		if (Image == null) {
+			if (other.Image != null)
+				return false;
+		} else if (!Image.equals(other.Image))
+			return false;
 		if (Manager_Id != other.Manager_Id)
 			return false;
 		if (No_of_Leaves_Applied != other.No_of_Leaves_Applied)
 			return false;
 		return true;
-	}
-	public Employee(String employee_LastName, String employee_FirstName, String employee_Address, String employee_Role,
-			String employee_User_Name, String employee_Password, String employee_Joining, String employee_Email,
-			int manager_Id, int employee_Id, int no_of_Leaves_Applied, long employee_Phone) {
-		super();
-		Employee_LastName = employee_LastName;
-		Employee_FirstName = employee_FirstName;
-		Employee_Address = employee_Address;
-		Employee_Role = employee_Role;
-		Employee_User_Name = employee_User_Name;
-		Employee_Password = employee_Password;
-		Employee_Joining = employee_Joining;
-		Employee_Email = employee_Email;
-		Manager_Id = manager_Id;
-		Employee_Id = employee_Id;
-		No_of_Leaves_Applied = no_of_Leaves_Applied;
-		Employee_Phone = employee_Phone;
 	}
 	public Employee() {
 		super();

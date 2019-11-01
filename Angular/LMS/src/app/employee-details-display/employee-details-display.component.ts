@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Employee } from '../home/Employee';
+import { CommonService } from '../common.service';
+import { EmployeeDetailsDisplayService } from './employee-details-display.service';
 
 @Component({
   selector: 'app-employee-details-display',
@@ -6,30 +9,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./employee-details-display.component.css']
 })
 export class EmployeeDetailsDisplayComponent implements OnInit {
-  EmployeeID:number;
-  FirstName: String;
-  LastName:String;
-  EmailAddress:String;
-  Mobile:number;
-  Department:String;
-  Address:String;
-  City:String;
-  State: string;
-  PostalCode:String;
-  constructor() { 
-  this.EmployeeID=49443124;
-  this.FirstName="Sunishma Reddy";
-  this.LastName="Suram";
-  this.EmailAddress="sunishma@hexaware.com";
-  this.Mobile=2034009876;
-  this.Department="Software Development"; 
-  this.Address="6097 Barfield Road";
-  this.City="Atlanta";
-  this.State="GA";
-  this.PostalCode="09876";
+  public searchText : any;
+  emp :Employee[];
+  errorMsg: any;
+  constructor(public admindashboardService : EmployeeDetailsDisplayService,public commonService : CommonService) { 
+   this.emp = this.commonService.getEmployee();
   }
 
   ngOnInit() {
+     
+    /* this.admindashboardService.getAdmin().subscribe(
+      data => this.admin = data,
+      error => this.errorMsg = error
+    ); */
   }
 
 }

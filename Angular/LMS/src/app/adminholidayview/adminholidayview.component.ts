@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminholidayviewService } from './adminholidayview.service'
+import { Holidays } from '../holidays';
 /* import {MatDialog,MatDialogConfig} from '@angular/material'
 import { AdminholidayaddComponent } from '../adminholidayadd/adminholidayadd.component'; */
 @Component({ 
@@ -8,7 +9,7 @@ import { AdminholidayaddComponent } from '../adminholidayadd/adminholidayadd.com
   styleUrls: ['./adminholidayview.component.css']
 })
 export class AdminholidayviewComponent implements OnInit {
-  holidays: holidays[];
+  holidays: Holidays[];
   public searchText : any;
   errorMsg: any;
   constructor(public adminholidayviewService : AdminholidayviewService) { }

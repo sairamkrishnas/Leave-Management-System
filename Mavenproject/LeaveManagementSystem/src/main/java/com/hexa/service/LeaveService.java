@@ -1,35 +1,37 @@
 package com.hexa.service;
 
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 import com.hexa.connection.DbConnection;
 import com.hexa.model.Leave;
 
 public class LeaveService {
 	ResultSet rs = null;
+	ArrayList<Leave> viewLeaveHistory = new ArrayList<Leave>();
 	
-	public ResultSet ViewLeaveHistory() {
+	public ArrayList<Leave> ViewLeaveHistory() {
 		
 		DbConnection db = new DbConnection();
-		rs = db.ViewLeave();
+		viewLeaveHistory = db.ViewLeave();
 		
-		return rs;
+		return viewLeaveHistory;
 	}
 	
-	public ResultSet EmployeeLeaveHistory(int i){
+	public ArrayList<Leave> EmployeeLeaveHistory(int i){
 		
 		DbConnection db = new DbConnection();
-		rs = db.Empleavehis(i);
+		viewLeaveHistory = db.Empleavehis(i);
 		
-		return rs;
+		return viewLeaveHistory;
 	}
 	
-	public ResultSet EmployeePendingLeave() {
+	public ArrayList<Leave> EmployeePendingLeave() {
 		
 		DbConnection db = new DbConnection();
-		rs = db.ViewPendingLeave();
+		viewLeaveHistory = db.ViewPendingLeave();
 		
-		return rs;
+		return viewLeaveHistory;
 	}
 	
 }

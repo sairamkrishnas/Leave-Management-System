@@ -24,9 +24,9 @@
                 </div>
                     
             </div>-->
-        <div class="card">
-    
-                            <img src="assets\manager.jpg" alt="Selva Kumar" style="width:45%; border-radius:140px;" >
+        <div class="card" *ngFor = "let e of emp1" >
+
+                            <img src="{{e.image}}" alt="Selva Kumar" style="width:45%; border-radius:140px;" >
                             <br>
                     
                         <table>
@@ -36,7 +36,7 @@
                                     <b>Manager ID</b>
                                 </td>
                                 <td align = left>
-                                    {{ManagerID}}
+                                    {{e.employee_Id}}
                                 </td>   
                             </tr>
                             <br>
@@ -45,7 +45,7 @@
                                     <b>First Name </b>
                                 </td>
                                 <td align = left>
-                                    {{FirstName}}
+                                    {{e.employee_FirstName}}
                                 </td>  
                             </tr>
                             <br>
@@ -54,7 +54,7 @@
                                    <b> Last Name</b>
                                 </td>
                                 <td align = left>
-                                    {{LastName}}
+                                    {{e.employee_LastName}}
                                 </td> 
                                   
                             </tr>
@@ -64,7 +64,7 @@
                                     <b>Email Address</b>
                                 </td>
                                 <td align = left>
-                                    {{EmailAddress}}
+                                    {{e.employee_Email}}
                                 </td>   
                             </tr>
                             <br>
@@ -73,7 +73,7 @@
                                    <b> Mobile</b>
                                 </td>
                                 <td align = left>
-                                    {{Mobile}}
+                                    {{e.employee_Phone}}
                                 </td>   
                             </tr>
                             <br>

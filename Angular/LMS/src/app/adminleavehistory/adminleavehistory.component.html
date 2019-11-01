@@ -7,37 +7,48 @@
       <caption><div class="w3-left" style="color: white"><h2>Leave History of all Employees</h2></div><div class="w3-right"><input [(ngModel)]="searchText" class="form-control" type="text" placeholder="Search.." aria-label="Search"></div></caption>
         <thead>
           <tr>
-            <th><h2>Id</h2></th> 
-            <th><h2>LeaveId</h2></th>
-            <th><h2>Name</h2></th>
-            <th><h2>FromDate</h2></th>
-            <th><h2>ToDate</h2></th>              
-            <th><h2>Reason</h2></th>
-            <th><h2>Status</h2></th>
+            <th><h2>employee_Id</h2></th> 
+            <th><h2>leave_Id</h2></th>
+            <th><h2>leave_Type</h2></th>
+            <th><h2>leave_Reason</h2></th>
+            <th><h2>from_Date</h2></th>              
+            <th><h2>to_Date</h2></th>
+            <th><h2>leave_Status</h2></th>
           </tr>
         </thead>
       
-      <tbody>
-          <tr *ngFor = "let lea of leave  | adminleavehistory: {Id: searchText, Lid:searchText,name:searchText, 
-            from:searchText,to:searchText,reason:searchText,  status: searchText}">
-              <td>{{lea.Id}}</td>
-              <td>{{lea.Lid}}</td>
-              <td>{{lea.name}}</td>
-              <td>{{lea.from}}</td>
-              <td>{{lea.to}}</td>
-              <td>{{lea.reason}}</td>
+      <tbody class="w3-center">
+          <tr *ngFor = "let lea of leave  | adminleavehistory: {employee_Id: searchText, leave_Id:searchText,leave_Type:searchText, 
+            leave_Reason:searchText,from_Date:searchText,to_Date:searchText,  leave_Status: searchText}">
+              <td>{{lea.employee_Id}}</td>
+              <td>{{lea.leave_Id}}</td>
+              <td>{{lea.leave_Type}}</td>
+              <td>{{lea.leave_Reason}}</td>
+              <td>{{lea.from_Date}}</td>
+              <td>{{lea.to_Date}}</td>
               <td>
-                  <div *ngIf="lea.status=='Approved'; else notShow">
-                      <span class="btn btn-success">Approved</span>
+                  <div *ngIf="lea.leave_Status=='Approved'; else Rejected">
+                      <span class="btn btn-success">{{lea.leave_Status}}</span>
                     </div>
-                    
+                    <ng-template #Rejected>
+                      <div *ngIf="lea.leave_Status=='Rejected'; else notShow">
+                        <span class="btn btn-danger">{{lea.leave_Status}}</span>
+                      </div>
+                  </ng-template>
                     <ng-template #notShow>
-                        <span class="btn btn-danger">Rejected</span>
+                        <span class="btn btn-warning">{{lea.leave_Status}}</span>
                     </ng-template>
               </td>
           </tr>
           </tbody>
         </table>
         <br><br><br><br>
+        <br>
+<br><br>
+<br>
+<br><br>
+<br>
+<br><br>
+<br>
       </div>
         <app-footer></app-footer>
