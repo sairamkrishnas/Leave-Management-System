@@ -27,6 +27,8 @@ import {RouterModule} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms'; 
 import {LeavepageService} from './leave-page/leavepage.service';
+import {HomeService} from './home/home.service';
+import {CommonService} from './common.service';
 
 @NgModule({
   declarations: [
@@ -49,23 +51,22 @@ import {LeavepageService} from './leave-page/leavepage.service';
     HeaderComponent,
     LeavePageComponent,
     FooterComponent,
-    
   ],
   imports: [
     RouterModule.forRoot([
-      {path : 'employee-dashboard', component: EmployeeDashboardComponent},
-      {path : 'employee-details-display', component: EmployeeDetailsDisplayComponent},
-      {path : 'manager-details', component: ManagerDetailsComponent},
-      {path : 'apply-leave', component: ApplyLeaveComponent},
-      {path : 'employeeleavehistory', component: EmployeeLeaveHistoryComponent},
-      {path:'', component: HomeComponent},
-      {path:'*', component: ErrorHandler},
-      {path: 'adminleavehistory', component: AdminleavehistoryComponent },
+        {path : 'employee-dashboard', component: EmployeeDashboardComponent},
+      { path : 'employee-details-display', component: EmployeeDetailsDisplayComponent},
+      { path : 'manager-details', component: ManagerDetailsComponent},
+      { path : 'apply-leave', component: ApplyLeaveComponent},
+      { path : 'employeeleavehistory', component: EmployeeLeaveHistoryComponent},
+      { path:'', component: HomeComponent},
+      { path:'*', component: ErrorHandler},
+      { path: 'adminleavehistory', component: AdminleavehistoryComponent },
       { path: 'home',      component: HomeComponent },
       { path: 'adminholidayadd',      component: AdminholidayaddComponent },
       { path: 'admindashboard',      component: AdmindashboardComponent },
-       { path: 'leave-page', component:LeavePageComponent  },
-       {path:'manager-dash-board',  component:ManagerDashBoardComponent},
+      { path: 'leave-page', component:LeavePageComponent  },
+      { path:'manager-dash-board',  component:ManagerDashBoardComponent},
       { path: 'adminholidayview', component: AdminholidayviewComponent }],),
     MatDialogModule,
     BrowserModule,

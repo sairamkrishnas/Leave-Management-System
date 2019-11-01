@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { FormGroup, FormBuilder, Validators, NgForm } from '@angular/forms';
+import { Router, NavigationEnd } from '@angular/router';
+import { HomeService } from './home.service';
+import { NgForOf } from '@angular/common';
+import { Employee } from './Employee';
+import {CommonService} from '../common.service';
 
 @Component({
   selector: 'app-home',
@@ -8,21 +12,37 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  latitude = 33.911702;
-  longitude =-84.350697;
-  locationChosen = false;
-
-  onChoseLocation(event) {
-    this.latitude = event.coords.lat;
-    this.longitude = event.coords.lng;
-    this.locationChosen = true;
-  }
   registerForm: FormGroup;
   submitted = false;
   name:string;
   password:string;
-  constructor(private router:Router, private formBuilder: FormBuilder) { }
+  manager = "Manager";
+  employee = "Employee";
+  admin = "Admin";
+  emp : Employee[];
+
+  errorMsg: any;
+  stateService: any;
   
+mySubscription: any;
+  constructor(private router:Router, private formBuilder: FormBuilder,public homeService : HomeService,public commonService : CommonService) { 
+    this.router.routeReuseStrategy.shouldReuseRoute = function () {
+      return false;
+    };
+    this.mySubscription = this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        // Trick the Router into believing it's last link wasn't previously loaded
+        this.router.navigated = false;
+      }
+    });
+
+
+  }
+  ngOnDestroy() {
+    if (this.mySubscription) {
+      this.mySubscription.unsubscribe();
+    }
+  }
   ngOnInit() { this.registerForm = this.formBuilder.group({
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required, Validators.minLength(6)]]
@@ -32,28 +52,45 @@ export class HomeComponent implements OnInit {
 
   onSubmit() {
       this.submitted = true;
-
-      // stop here if form is invalid
+      
       if (this.registerForm.valid) {
-        if(this.name == 'vicky@gmail.com' && this.password == 'vignesh'){
+        this.homeService.getEmployee(this.name,this.password).subscribe({
+            next: data => {
+              this.emp = data;
+              if( this.emp != null ){
+                if(this.emp[0].employee_Role == this.manager){
+                  this.commonService.employeedetails(this.emp);
+                  this.router.navigate(["manager-dash-board"]);
+                }
+                else if(this.emp[0].employee_Role == this.employee){
+                  this.commonService.employeedetails(this.emp);
+                  this.router.navigate(["employee-dashboard"]);
+                }
+                else{
+                  this.commonService.employeedetails(this.emp);
+                  this.router.navigate(["admindashboard"]);
+                }
+              }
+              else{
+                alert("Invalid credentials\n Please try again");
+                this.router.navigate(["home"]);
+              }
+          },
+          error: error => this.errorMsg = error
+        });
+          
+        /* if(this.emp.employee_Role.localeCompare(this.manager)){
           this.router.navigate(["manager-dash-board"]);
-         }
-         else if(this.name == 'sairam@gmail.com' && this.password == 'sairam1234' ){
-          this.router.navigate(["admindashboard"]);
-         }
-         else if(this.name == 'sunishma@gmail.com' && this.password == 'sunishma' ){
-          this.router.navigate(["employee-dashboard"]);
-         }
-         else {
+         }else {
            alert("Invalid credentials");
            this.router.navigate(['home']);
-         }
+         } */
        }
       
       else{
         return;
       }
-       
-
   }
+
+
 }

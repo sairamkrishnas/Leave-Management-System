@@ -40,33 +40,32 @@
                           <th><b>LeaveID</b></th>
                           <th><b>Start Date</b></th>
                           <th><b>End Date</b></th>
-                          <th><b>Number of Days</b></th>
+                
                           <th><b>Leave Type</b></th>
                          
-                          <th><b>Applied On</b></th>
-                          <th><b>Manager Comments</b></th>
+            
+                          <th><b>Reason</b></th>
                           <th><b>Status</b></th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr *ngFor = "let lea of leave">
-                          <td>{{lea.LID}}</td>
-                          <td>{{lea.StartDate}}</td>
-                          <td>{{lea.EndDate}}</td>
-                          <td align = "center">{{lea.NDays}}</td>
-                          <td>{{lea.LeaveType}}</td>
+                          <td>{{lea.leave_Id}}</td>
+                          <td>{{lea.from_Date}}</td>
+                          <td>{{lea.to_Date}}</td>
+                          <td>{{lea.leave_Type}}</td>
                          
-                          <td>{{lea.AppliedOn}}</td>
-                          <td>{{lea.MComments}}</td>
+                    
+                          <td>{{lea.leave_Reason}}</td>
                           <td>
-                            <div *ngIf="lea.Status=='Approved'">
+                            <div *ngIf="lea.leave_Status=='Approved'">
                               <span class="btn btn-success">Approved</span>
                             </div>
-                            <div *ngIf="lea.Status=='Rejected'">
+                            <div *ngIf="lea.leave_Status=='Rejected'">
                               <span class = "btn btn-danger">Rejected</span>
                             </div>
-                            <div *ngIf="lea.Status=='Pending'">
-                              <span class = "btn " style="background-color: rgb(104, 171, 247);color:white;">Pending</span>
+                            <div *ngIf="lea.leave_Status=='Pending'">
+                              <span class="btn btn-warning" >Pending</span>
                             </div>
                           </td>
                           

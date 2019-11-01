@@ -12,53 +12,45 @@
           <a routerLink="/home" routerLinkActive="active"><span class="fa fa-sign-out"></span> Logout</a>
         </div>
       </div>
-  
-<div class="container-fluid text-center">    
-  <div class="row content">
-    
-    <div class="col-sm-8 text-left">
-            <div class="container">
-                    <div class="row">
-                      <div class="row"style="padding-bottom:40px;padding-top:20px">
-                       
-            
+ 
             <table class="table table-hover">
-            <thead style="color: blue">
-              <tr>
-                    <th>Id</th>
-                    <th>LeaveId</th>
-                <th>First name</th>              
-                <th>Start date</th>
-                <th>End date</th>               
-                <th>Status</th>
-
-              </tr>
-            </thead>
-          
-          <tbody>
-                <tr *ngFor = "let emp of holidays">
-                        <td><h4>{{emp.id}}</h4></td>
-                        <td><h4>{{emp.leaveid}}</h4></td>
-                  <td><h4>{{emp.Firstname}}</h4></td>
-        
-            <td><h4>{{emp.Startdate}}</h4></td>
-            <td><h4>{{emp.enddate}}</h4></td>
-            <td><h4>{{emp.Status}}</h4></td>
-           
-                </tr>
-              </tbody>
+                <thead>
+                    <tr>
+                      <th><h2>employee_Id</h2></th> 
+                      <th><h2>leave_Id</h2></th>
+                      <th><h2>leave_Type</h2></th>
+                      <th><h2>leave_Reason</h2></th>
+                      <th><h2>from_Date</h2></th>              
+                      <th><h2>to_Date</h2></th>
+                      <th><h2>leave_Status</h2></th>
+                    </tr>
+                  </thead>
+                
+                <tbody class="w3-center">
+                    <tr *ngFor = "let lea of leave">
+                        <td>{{lea.employee_Id}}</td>
+                        <td>{{lea.leave_Id}}</td>
+                        <td>{{lea.leave_Type}}</td>
+                        <td>{{lea.leave_Reason}}</td>
+                        <td>{{lea.from_Date}}</td>
+                        <td>{{lea.to_Date}}</td>
+                        <td>
+                            <div *ngIf="lea.leave_Status=='Approved'; else Rejected">
+                                <span class="btn btn-success">{{lea.leave_Status}}</span>
+                              </div>
+                              <ng-template #Rejected>
+                                <div *ngIf="lea.leave_Status=='Rejected'; else notShow">
+                                  <span class="btn btn-danger">{{lea.leave_Status}}</span>
+                                </div>
+                            </ng-template>
+                              <ng-template #notShow>
+                                  <span class="btn btn-warning">{{lea.leave_Status}}</span>
+                              </ng-template>
+                        </td>
+                    </tr>
+                    </tbody>
             </table>
            
-    </div>
-    
-  </div>
-  
-</div>
-</div>
-
-</div>
-
-</div>
 <br>
 <br>
 <br>

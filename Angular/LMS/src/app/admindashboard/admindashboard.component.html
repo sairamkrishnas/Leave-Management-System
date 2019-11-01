@@ -7,33 +7,32 @@
   <br>
   <br>
 </div>
-
-<div class="cnt-block equal-hight">
-    
-    <table *ngFor = "let a of admin">
+    <table *ngFor = "let e of emp" class="w3-center">
         <tr>
           <h2>Welcome</h2>
         </tr>
         <tr>
-            <figure><img src="assets/SaiRam.jpeg" class="img-responsive" alt=""></figure>
+            <figure><img src="{{e.image}}" class="img-responsive" alt="sairam"></figure>
         </tr>
         <tr>
-          {{a.Firstname}},{{a.Lastname}}
+            ID : {{e.employee_Id}}
+          </tr>
+        <tr>
+          Name : {{e.employee_FirstName}},{{e.employee_LastName}}
         </tr>
         <tr>
-          {{a.Id}}
+          Email : {{e.employee_Email}}
         </tr>
         <tr>
-          {{a.Email}}
+          Mobile : {{e.employee_Phone}}
         </tr>
         <tr>
-          {{a.Mobile}}
+          Address : {{e.employee_Address}}
         </tr>
         <tr>
-          {{a.Address}}
+          Joining Date : {{e.employee_Joining}}
         </tr>
       </table>
-  </div>
 <br>
 <br>
 <br><br>

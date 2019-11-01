@@ -159,7 +159,7 @@
                      <h1 class = "w3-center">Leave Request Application</h1>
                      <br>
                      <br>
-                     <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+                     <form name="form" (ngSubmit)="f.form.valid && onSubmit(f.value)" #f="ngForm" novalidate>
                      <div class="form-group">
                         <label for="sdate">Start Date:</label>
                          <input type="date" class="form-control" name="sdate" [(ngModel)]="model.sdate" #sdate="ngModel" [ngClass]="{ 'is-invalid': f.submitted && sdate.invalid }" required />
@@ -174,14 +174,14 @@
                             <div *ngIf="edate.errors.required" style="color:red;">*Please select a date</div>
                         </div>
                      </div>
-                     <div class="form-group">
+                     <!-- <div class="form-group">
                         <label for="day">Number of days:</label> <br>
                          <input type="number" name="day" [(ngModel)]="model.day" #day="ngModel" [ngClass]="{ 'is-invalid': f.submitted && day.invalid }" required />
                            
                          <div *ngIf="f.submitted && day.invalid" >
                             <div *ngIf="day.errors.required" style="color:red;">*Enter number of days</div>
                         </div>
-                     </div>
+                     </div> -->
                      <div class="form-group">
                         <label for="Ltype">Leave Type:</label>
                         <select class="form-control" name="Ltype" [(ngModel)]="model.Ltype" #Ltype="ngModel" [ngClass]="{ 'is-invalid': f.submitted && Ltype.invalid }" required >

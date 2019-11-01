@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { LeaveHistory } from '../leavehistory';
 
 @Injectable({
   providedIn: 'root'
@@ -8,11 +9,11 @@ import { Observable } from 'rxjs';
 export class AdminleavehistoryService {
   constructor(private httpClient:HttpClient) { }
 
-  /* getEmp():Observable<employee[]>{
-    let url = "http://dummy.restapiexample.com/api/v1/employees"
-    return this.httpClient.get<employee[]>(url);
-  } */
-  getLeaveHis() :Observable<leavehistory[]>{
-    return this.httpClient.get<leavehistory[]>("assets/adminleavehistory.json");
+  getLeaveHis():Observable<LeaveHistory[]>{
+    let url = "http://localhost:14883/LeaveManagementSystem/api/training/ViewAllLeaves"
+    return this.httpClient.get<LeaveHistory[]>(url);
   }
+ /*  getLeaveHis() :Observable<leavehistory[]>{
+    return this.httpClient.get<leavehistory[]>("assets/adminleavehistory.json");
+  } */
 }

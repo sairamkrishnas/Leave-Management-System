@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LeavepageService } from './leavepage.service';
+import { LeaveHistory } from '../leavehistory';
+import { AdminleavehistoryService } from '../adminleavehistory/adminleavehistory.service';
 
 @Component({
   selector: 'app-leave-page',
@@ -7,21 +9,15 @@ import { LeavepageService } from './leavepage.service';
   styleUrls: ['./leave-page.component.css']
 })
 export class LeavePageComponent implements OnInit {
-  holidays: pending[];
+  leave: LeaveHistory[];
+  public searchText : any;
   errorMsg: any;
- 
-  constructor(public leavepageService : LeavepageService) {
-    
-   }
+  constructor(public adminleavehistoryService : AdminleavehistoryService) { }
 
   ngOnInit() {
-     
-    this.leavepageService.getpending().subscribe(
-      
-      data => this.holidays = data,
+    this.adminleavehistoryService.getLeaveHis().subscribe(
+      data => this.leave = data,
       error => this.errorMsg = error
-      );
-    
-
-    }
+    );
+  }
 }
