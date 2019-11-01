@@ -176,12 +176,13 @@ public class TrainingRest{
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
 
-    public String AcceptorReject(Leave l){
+    public ArrayList<Leave> AcceptorReject(Leave l){
     	EmployeeService e = new EmployeeService();
-
+    	ArrayList<Leave> viewPendingLeave = new ArrayList<Leave>();
+    	
     	String msg1 = e.AcceptOrReject(l.getLeave_Id(),l.getLeave_Status());
-
-        return msg1;
+    	viewPendingLeave = ViewPendingLeaves();
+        return viewPendingLeave;
     } 
 /*
     @GET
