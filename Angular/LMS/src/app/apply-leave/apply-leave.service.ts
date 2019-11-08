@@ -10,6 +10,6 @@ export class ApplyLeaveService {
  
   inserData(value:leave):Observable<any>{
     return this.http.post('http://localhost:14883/LeaveManagementSystem/api/training/ApplyLeave',
-                            value,{ headers: Headers,responseType:'text'});
+                            value/* ,{ headers: Headers,responseType:'text'} */);
 }
 }

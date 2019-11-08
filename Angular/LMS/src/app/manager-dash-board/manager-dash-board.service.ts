@@ -13,7 +13,7 @@ export class ManagerDashBoardService {
    }
    AcceptReject(md:any):Observable<any>{
     let url = "http://localhost:14883/LeaveManagementSystem/api/training/AcceptorReject/";
-    return this.httpClient.put<any>(url,md,{ headers: Headers,responseType:'text'});
+    return this.httpClient.put<any>(url,md/* ,{ headers: Headers,responseType:'text'} */);
    }
    getLeaveHis():Observable<LeaveHistory[]>{
     let url = "http://localhost:14883/LeaveManagementSystem/api/training/ViewPendingLeaves"

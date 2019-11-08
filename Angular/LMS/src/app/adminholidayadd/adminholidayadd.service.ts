@@ -10,7 +10,7 @@ export class AdminholidayaddService {
  
   inserData(value:holiday):Observable<any>{
     return this.http.post('http://localhost:14883/LeaveManagementSystem/api/training/AddHoliday',
-                            value ,{ headers: Headers,responseType:'text'});
+                            value/*  ,{ headers: Headers,responseType:'text'} */);
 }
 }
 
